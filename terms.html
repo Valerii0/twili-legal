@@ -1,11 +1,762 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Terms - Twili</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111326">
+  <meta name="description" content="Terms of Use for the Twili personalized storytelling app.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Terms of Use — Twili</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #0b0d19;
+      --surface: rgba(24, 27, 50, 0.9);
+      --border: rgba(219, 205, 255, 0.16);
+      --text: #f7f5ff;
+      --muted: #c6c1d8;
+      --accent: #c9a7ff;
+      --accent-strong: #eadfff;
+      --warning: #f4c86a;
+      --max-width: 860px;
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-width: 280px;
+      background:
+        radial-gradient(circle at 12% -5%, rgba(140, 92, 246, 0.24), transparent 36rem),
+        radial-gradient(circle at 92% 18%, rgba(228, 134, 239, 0.12), transparent 30rem),
+        var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.68;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: var(--accent-strong);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover { color: #ffffff; }
+
+    a:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid var(--warning);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 12px;
+      left: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #111326;
+      font-weight: 700;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 13, 25, 0.86);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 13px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--text);
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      background: rgba(201, 167, 255, 0.13);
+      color: var(--text);
+    }
+
+    main {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 58px 0 72px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.25rem, 8vw, 4.2rem);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+    }
+
+    .lede {
+      max-width: 730px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+    }
+
+    .dates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .summary {
+      margin: 28px 0 20px;
+      padding: 22px 24px;
+      border-radius: var(--radius);
+    }
+
+    .summary {
+      border: 1px solid rgba(201, 167, 255, 0.3);
+      background: linear-gradient(135deg, rgba(101, 70, 176, 0.28), rgba(28, 32, 59, 0.72));
+    }
+
+    .summary h2 { margin-top: 0; font-size: 1.25rem; }
+    .summary ul { margin-bottom: 0; padding-left: 1.25rem; }
+
+    section {
+      margin: 18px 0;
+      padding: clamp(22px, 5vw, 34px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 14px 44px rgba(0, 0, 0, 0.14);
+    }
+
+    section h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.25rem, 4vw, 1.55rem);
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+    }
+
+    h3 { margin: 24px 0 8px; font-size: 1.05rem; }
+    p { margin: 0 0 14px; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { padding-left: 1.35rem; }
+    li + li { margin-top: 8px; }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 16px 18px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      background: rgba(201, 167, 255, 0.08);
+      color: var(--muted);
+    }
+
+    address { font-style: normal; color: var(--muted); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+      font-size: 0.85rem;
+    }
+
+    .footer-links { display: flex; flex-wrap: wrap; gap: 10px 18px; }
+
+    @media (max-width: 640px) {
+      .site-header { position: static; }
+      .header-inner { align-items: flex-start; flex-direction: column; gap: 6px; }
+      nav ul { justify-content: flex-start; }
+      nav a { padding: 6px 8px; }
+      main { padding-top: 40px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    @media print {
+      :root { color-scheme: light; }
+      body { background: #ffffff; color: #111111; font-size: 11pt; }
+      .site-header, .skip-link { display: none; }
+      main { width: 100%; padding: 0; }
+      .lede, .dates, address, footer { color: #333333; }
+      .summary, section {
+        break-inside: avoid;
+        border: 1px solid #cccccc;
+        background: #ffffff;
+        box-shadow: none;
+      }
+      a { color: #111111; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Terms</h1>
-  <p>Coming soon...</p>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="terms.html" aria-label="Twili legal home">Twili</a>
+      <nav aria-label="Legal documents">
+        <ul>
+          <li><a href="terms.html" aria-current="page">Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="billing.html">Subscription Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <header>
+      <p class="eyebrow">Twili legal</p>
+      <h1>Terms of Use</h1>
+      <p class="lede">
+        These Terms govern the Twili iOS app, its personalized AI-generated stories and
+        illustrations, Twili Originals, and related services. Twili is designed for an adult
+        parent or guardian to operate for family use.
+      </p>
+      <p class="dates">
+        <span><strong>Effective:</strong> August 15, 2026</span>
+        <span><strong>Last updated:</strong> August 15, 2026</span>
+      </p>
+    </header>
+
+    <aside class="summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Important points for families</h2>
+      <ul>
+        <li>The account holder and every person entering information must be at least 18 and have legal authority to provide the child’s information.</li>
+        <li>Stories and illustrations are generated with artificial intelligence and can be inaccurate, unexpected, unsuitable, or similar to content generated for others. An adult must review every output before a child sees it.</li>
+        <li>Minimize information about any real child. Because Twili does not have OpenAI Zero Data Retention, do not use AI generation with a profile or inputs representing a real child under 13; use only wholly fictional, non-personal inputs for younger-audience stories.</li>
+        <li>Paid plans renew through Apple unless canceled. The separate <a href="billing.html">Subscription &amp; Billing Terms</a> apply.</li>
+        <li>Mandatory consumer rights in your country are not waived by these Terms.</li>
+      </ul>
+    </aside>
+
+    <section aria-labelledby="agreement">
+      <h2 id="agreement">1. Agreement and related terms</h2>
+      <p>
+        These Terms of Use (also called the “Terms of Service”) form an agreement between you
+        and <strong>Valerii Petrychenko, a sole proprietor registered and operating in
+        Ukraine</strong>, the operator of Twili
+        (“Twili,” “we,” “us,” or “our”). By downloading, installing, accessing, purchasing
+        through, or using Twili, you agree to these Terms. If you do not agree, do not use the
+        service and remove the app from your devices.
+      </p>
+      <p>
+        Our <a href="privacy.html">Privacy Policy</a> explains our data practices. Our
+        <a href="billing.html">Subscription &amp; Billing Terms</a> apply to every subscription.
+        Both are incorporated into these Terms. Your use of the iOS app is also subject to
+        Apple’s applicable Usage Rules and, unless a custom end-user license provided for Twili
+        through App Store Connect applies, Apple’s
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Standard Licensed Application End User License Agreement</a>
+        (“Apple Standard EULA”). Mandatory law and Apple’s purchase terms control where they
+        cannot lawfully be varied by this agreement.
+      </p>
+    </section>
+
+    <section aria-labelledby="eligibility">
+      <h2 id="eligibility">2. Adult eligibility and responsibility for children</h2>
+      <p>
+        Twili is a parent-facing service. You may enter into these Terms only if you are at least
+        18, have reached the age of legal majority where you live, have capacity to contract, and are legally
+        authorized to use the relevant device, Apple Account, and payment method. A child must
+        not create or operate the service account, enter a profile or prompt, contact us, or make
+        a purchase independently. This restriction includes teenagers. A child may read or listen
+        to an adult-reviewed story and may suggest ideas while an adult operates the app.
+      </p>
+      <p>
+        If you create a child profile or submit information about a child, you represent that
+        you are the child’s parent or legal guardian and have any consent required to provide
+        and process that information. You are responsible for
+        supervising a child’s access to stories and for the activity of anyone using Twili on
+        your device. Parental controls offered by Apple supplement, but do not replace, your
+        supervision.
+      </p>
+      <p>
+        Until the Privacy Policy states that Zero Data Retention is enabled, you must not use
+        AI-generation features with a profile or information that represents or can be linked to
+        a real child under 13, or under the applicable age of digital consent where the child
+        lives. To request a story for a younger audience, use a wholly fictional character and
+        fictional age setting that are not linked to a real child, and do not submit the real
+        child’s name, nickname, exact age, school, address, health information, contact details,
+        photograph, or other personal information.
+      </p>
+      <p>
+        Do not use Twili if you cannot make these representations. If we reasonably believe a
+        child supplied information directly without required authorization, we may restrict the
+        service and delete the information as described in the Privacy Policy.
+      </p>
+    </section>
+
+    <section aria-labelledby="service">
+      <h2 id="service">3. The Twili service</h2>
+      <p>
+        Twili lets an adult create local child profiles, choose a story theme and length, request
+        personalized story text and an illustration, save and edit stories in a local library,
+        mark favorites, read stories, and share selected content through the iOS share sheet.
+        Twili also includes curated or bundled stories identified as “Twili Originals.” Features
+        may differ by app version, device, country, free or paid status, operational capacity,
+        and the offering shown in the app.
+      </p>
+      <p>
+        Twili automatically creates a pseudonymous installation-based service identity so its
+        backend can authenticate requests and apply service or generation limits. It is not a
+        public profile and does not require a named email/password login. You must not attempt to
+        transfer, sell, share, or circumvent this identity or its access credentials.
+      </p>
+      <p>
+        An internet connection is required for generation, subscription validation, remote
+        configuration, and some support functions. Saved profiles and generated stories are
+        primarily stored on the device; Twili does not promise cloud synchronization or permanent
+        recovery. You are responsible for device backups and for retaining any content you need.
+      </p>
+    </section>
+
+    <section aria-labelledby="ai">
+      <h2 id="ai">4. AI-generated content and adult review</h2>
+      <p>
+        Personalized story text and illustrations are produced using one or more artificial
+        intelligence systems. Your selected profile name, age, theme, and story length are sent
+        through Twili’s backend to OpenAI’s API platform, as described in the Privacy Policy. The output
+        is generated probabilistically and is not written or individually approved by a Twili
+        editor before delivery.
+      </p>
+      <p>
+        AI output may be inaccurate, incomplete, repetitive, biased, frightening, offensive,
+        developmentally unsuitable, inconsistent with your request, or unexpectedly similar to
+        output supplied to another person. Filters and instructions can reduce but cannot remove
+        those risks. <strong>You must read and assess every generated story and illustration
+        before showing or reading it to a child, sharing it, printing it, or relying on it.</strong>
+        Stop using an output that appears unsafe or inappropriate.
+      </p>
+      <p>
+        Twili is an entertainment and creative tool, not medical, psychological, therapeutic,
+        educational, legal, safety, or emergency advice. It is not designed to diagnose,
+        evaluate, treat, teach a required curriculum, or make decisions about an adult or child.
+        Consult an appropriately qualified professional for those matters and contact local
+        emergency services for an emergency.
+      </p>
+    </section>
+
+    <section aria-labelledby="privacy-minimization">
+      <h2 id="privacy-minimization">5. Protecting a child’s information</h2>
+      <p>
+        Enter only the minimum information needed to create a suitable story. Prefer a nickname
+        or first name. Do not submit a child’s surname, precise birth date, home or school address,
+        phone number, email, live location, passwords, government identifiers, medical or mental
+        health details, private family circumstances, images in a theme, or information that could
+        expose, embarrass, contact, locate, or identify a child outside your household.
+      </p>
+      <p>
+        The optional profile photo selected with Apple’s photo picker is stored locally in the
+        current app flow and is not included in the current generation request. Depending on your
+        device settings, local profiles, photos, and stories may enter an Apple device backup.
+        The Privacy Policy explains which fields leave the device and how to request deletion.
+      </p>
+      <p>
+        When you share a story or illustration through the iOS share sheet, you choose the
+        recipient or third-party app. That transfer occurs outside Twili and is governed by your
+        choice and the recipient service’s terms. Remove personal details before sharing and do
+        not share a child’s content publicly without lawful authority and careful consideration
+        of the child’s best interests.
+      </p>
+    </section>
+
+    <section aria-labelledby="input-output">
+      <h2 id="input-output">6. Your input and generated output</h2>
+      <h3>Your Input</h3>
+      <p>
+        “Input” means the profile information, theme, instructions, feedback, edits, and other
+        material you submit. You retain any rights you already hold in your Input. You grant us a
+        worldwide, non-exclusive, royalty-free, limited license to host, reproduce, transmit,
+        adapt, and disclose Input only as reasonably necessary to operate Twili, generate and
+        return the requested output, secure and troubleshoot the service, enforce these Terms,
+        and comply with law. That license includes the right to engage service providers for those
+        purposes and lasts only as long as the relevant purpose and retention rules require.
+      </p>
+      <p>
+        You represent that you have all permissions and legal authority needed for the Input and
+        that our processing of it as described will not violate another person’s privacy,
+        confidentiality, publicity, intellectual-property, or other rights. Do not submit content
+        under a duty of secrecy or content you are not entitled to use.
+      </p>
+      <h3>Generated Output</h3>
+      <p>
+        “Output” means the story text, title, and illustration generated specifically in response
+        to your request. As between you and Twili, and to the extent applicable law permits,
+        Twili assigns to you any rights it may have in that Output. You may use, edit, reproduce,
+        and share it for lawful purposes. This does not transfer rights in the Twili app, Twili
+        Originals, templates, interface, brands, or other pre-existing materials that may appear
+        separately from the generated Output.
+      </p>
+      <p>
+        Because Output is AI-generated, it may not qualify for copyright or other exclusive
+        protection, may not be unique, and other users may receive similar material. We do not
+        represent that Output is original, non-infringing, registrable, exclusive, or suitable for
+        commercial publication. You are responsible for reviewing and clearing any proposed public
+        or commercial use. The Privacy Policy explains how Twili and OpenAI process information
+        for text and image generation, including applicable storage and retention practices. Do
+        not submit confidential or sensitive information that is unnecessary for the requested
+        story.
+      </p>
+    </section>
+
+    <section aria-labelledby="acceptable-use">
+      <h2 id="acceptable-use">7. Acceptable use</h2>
+      <p>You must not use Twili, attempt to use it, or help another person use it to:</p>
+      <ul>
+        <li>exploit, groom, sexualize, endanger, identify, locate, threaten, harass, or abuse a child or any other person;</li>
+        <li>create or request child sexual abuse material, sexualized depictions of minors, non-consensual intimate material, trafficking content, or instructions facilitating abuse;</li>
+        <li>submit another child’s information without valid authority, impersonate someone, violate privacy, or disclose confidential or sensitive information;</li>
+        <li>infringe copyright, trademark, publicity, personality, or other rights, or request deceptive imitation intended to mislead others;</li>
+        <li>promote hate, discrimination, violence, self-harm, criminal activity, fraud, malware, weapons, or evasion of safety controls;</li>
+        <li>use Output as professional advice, evidence of fact, or an automated decision about a person;</li>
+        <li>reverse engineer, scrape, probe, overload, disrupt, bypass quotas or access controls, extract models or system prompts, use automated high-volume requests, or access non-public systems, except to the extent a restriction is prohibited by law;</li>
+        <li>resell or provide the service itself to others, remove proprietary notices, or suggest that Twili sponsors or endorses you without written permission; or</li>
+        <li>use Twili in violation of applicable law, sanctions, export controls, Apple terms, or a third-party service agreement.</li>
+      </ul>
+      <p>
+        We may reject a request, limit generation, preserve evidence, or restrict service access
+        when reasonably necessary to protect a child or another person, enforce these Terms,
+        investigate abuse, maintain service integrity, or comply with law. We may report apparent
+        child exploitation or other conduct where reporting is legally required.
+      </p>
+    </section>
+
+    <section aria-labelledby="twili-ip">
+      <h2 id="twili-ip">8. Twili intellectual property</h2>
+      <p>
+        Twili and its licensors own the app, software, backend, visual design, logos, trademarks,
+        selection and arrangement, bundled assets, and Twili Originals, together with all related
+        intellectual-property rights. The app is licensed, not sold.
+      </p>
+      <p>
+        Subject to these Terms and Apple’s Usage Rules, we grant you a personal, limited,
+        revocable, non-exclusive, non-transferable license to install and use Twili on Apple-branded
+        products you own or control, and as otherwise allowed through Apple Family Sharing or
+        volume purchasing where applicable. Twili Originals are licensed for private, personal,
+        non-commercial family reading and the sharing function expressly provided in the app.
+        You may not separately sell, publish, scrape, redistribute, or create a competing library
+        from Twili Originals without written permission or another legal right.
+      </p>
+      <p>
+        If you send a general suggestion that does not contain personal or confidential
+        information, you permit us to use it without payment or obligation. This feedback clause
+        does not give us ownership of a privacy request, child information, Input, or Output.
+      </p>
+    </section>
+
+    <section aria-labelledby="subscriptions">
+      <h2 id="subscriptions">9. Subscriptions and purchases</h2>
+      <p>
+        Twili may offer weekly and yearly auto-renewing subscriptions through Apple. Available
+        benefits, the full localized price, currency, billing period, and any offer shown in
+        Apple’s purchase sheet are the authoritative purchase terms. Current standard plans do
+        not include a free trial unless Apple’s purchase sheet expressly shows one.
+      </p>
+      <p>
+        Apple processes payment, renewal, cancellation, and refunds. Deleting a child profile,
+        deleting service data, uninstalling Twili, or stopping use does not cancel Apple billing.
+        Review the <a href="billing.html">Subscription &amp; Billing Terms</a> before purchasing.
+      </p>
+    </section>
+
+    <section aria-labelledby="availability">
+      <h2 id="availability">10. Availability, updates, and changes</h2>
+      <p>
+        We aim to keep Twili available but do not promise uninterrupted, error-free, or permanent
+        operation. Generation can fail or be delayed because of connectivity, capacity, safety
+        controls, third-party systems, maintenance, or events outside our reasonable control.
+        Features and reasonable anti-abuse or technical limits may change prospectively. A
+        disclosed paid generation allowance will not be reduced during its purchased billing
+        period and may change from the next renewal only with any notice or remedy required by
+        mandatory law. Necessary safety, security, abuse-prevention, or legal restrictions may
+        apply sooner. A subscription is not an unlimited-generation promise unless the purchase
+        screen expressly says “unlimited.”
+      </p>
+      <p>
+        We may release updates required for security, compatibility, legal compliance, or new
+        functionality. Some features may stop working on unsupported app or operating-system
+        versions. We may change or discontinue a free feature. If a paid service is materially
+        discontinued during an active paid period, we will provide the notice or remedy required
+        by mandatory law and Apple’s rules.
+      </p>
+      <p>
+        We may update these Terms prospectively. We will change the “Last updated” date and give
+        prominent or in-app notice of material changes where required. We will request fresh
+        consent when the law requires it. A change does not retroactively reduce a completed
+        purchase or a non-waivable right.
+      </p>
+    </section>
+
+    <section aria-labelledby="termination">
+      <h2 id="termination">11. Suspension, termination, and deletion</h2>
+      <p>
+        You may stop using Twili at any time. You can delete a child profile and its locally saved
+        stories in the app. Uninstalling normally removes the active local app container, subject
+        to Apple backups, but does not itself send a deletion instruction to Twili’s backend,
+        analytics, AI, crash-reporting, or subscription providers.
+      </p>
+      <p>
+        You may request deletion of your service account/profile and associated personal data at
+        any time through Contact Us in the app or by emailing
+        <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a>. After verifying a
+        request, we delete the account/profile and associated server-side data and delete or
+        request deletion of associated data from our service providers where supported. We may
+        retain limited information where reasonably necessary for legal compliance, security,
+        fraud prevention, transaction or accounting records, dispute resolution, or another
+        legitimate purpose permitted by law. The in-app form does not provide an independent
+        delivery acknowledgement, so email is recommended for time-sensitive deletion requests.
+        Twili automatically deletes an inactive service
+        account/profile after more than six months without activity. The Privacy Policy provides
+        further details.
+      </p>
+      <p>
+        Deleting service data does not cancel an Apple subscription; subscription cancellation
+        is a separate Apple process. We may suspend or terminate access for a material or repeated
+        breach, unlawful or unsafe conduct, fraud, security threats, payment reversal, or where
+        necessary to comply with law. Where practicable and lawful, we will give notice and a
+        reasonable opportunity to correct a remediable breach.
+      </p>
+      <p>
+        Terms that by their nature should survive—such as ownership, accrued payment obligations,
+        disclaimers, liability limits, dispute provisions, and lawful retention—remain effective
+        after termination.
+      </p>
+    </section>
+
+    <section aria-labelledby="third-parties">
+      <h2 id="third-parties">12. Third-party services</h2>
+      <p>
+        Twili depends on Apple, cloud hosting, AI generation, analytics, crash reporting, remote
+        configuration, and subscription-management services. The Privacy Policy identifies the
+        providers that process information for Twili. Third-party services may have their own
+        terms for portions of the relationship they control. You must comply with applicable
+        third-party terms, including Apple’s Media Services Terms and your data or internet
+        provider’s agreement.
+      </p>
+      <p>
+        We are responsible for selecting and configuring providers within our control, but we do
+        not control Apple’s App Store, a recipient app selected in the share sheet, your network,
+        or an independent third-party website. Links are provided for convenience and are not an
+        endorsement. Nothing here removes responsibility that applicable law places on Twili for
+        its processors or its own service.
+      </p>
+    </section>
+
+    <section aria-labelledby="disclaimers">
+      <h2 id="disclaimers">13. Disclaimers</h2>
+      <p>
+        Nothing in these Terms excludes an express warranty we make in writing or a statutory
+        guarantee that cannot lawfully be excluded. Subject to that sentence, Twili, its service,
+        generated Output, and Twili Originals are provided “as is” and “as available.” To the
+        maximum extent permitted by law, we disclaim implied warranties of merchantability,
+        satisfactory quality, fitness for a particular purpose, accuracy, quiet enjoyment,
+        non-infringement, uninterrupted availability, and that Output will be unique, error-free,
+        safe for a particular child, or consistent with every request.
+      </p>
+      <p>
+        You are responsible for adult review, lawful use, device security, backups, and decisions
+        to edit or share content. No statement in these Terms asks you to waive rights that cannot
+        be waived under consumer law in your place of residence.
+      </p>
+    </section>
+
+    <section aria-labelledby="liability">
+      <h2 id="liability">14. Limitation of liability</h2>
+      <p>
+        We do not limit liability where doing so would be unlawful, including liability for fraud,
+        fraudulent misrepresentation, willful misconduct, gross negligence where it cannot be
+        limited, death or personal injury caused by negligence, breach of non-waivable consumer
+        rights, or any other liability that mandatory law does not permit us to exclude.
+      </p>
+      <p>
+        Subject to the preceding paragraph, neither party is liable to the other for indirect,
+        incidental, special, exemplary, punitive, or consequential loss, or for lost profits,
+        revenue, business, goodwill, or data, arising from these Terms or Twili where that loss was
+        not reasonably foreseeable when the agreement was made. Subject to mandatory law, our
+        total aggregate liability arising from Twili during any 12-month period will not exceed
+        the greater of (a) the amount you paid for Twili during that period or (b) USD 100 (or the
+        equivalent in local currency).
+      </p>
+      <p>
+        These limits apply only to the extent fair and enforceable in your jurisdiction. Some
+        countries do not permit particular exclusions or caps, in which case the affected wording
+        does not apply and the remainder continues to the fullest lawful extent.
+      </p>
+    </section>
+
+    <section aria-labelledby="indemnity">
+      <h2 id="indemnity">15. Responsibility for misuse</h2>
+      <p>
+        If you use Twili on behalf of a business or in a commercial capacity, you will indemnify
+        and defend us against third-party claims, damages, and reasonable costs arising from your
+        unlawful Input, infringement of third-party rights, or material breach of Sections 2, 6,
+        or 7, to the extent permitted by law. This provision does not apply to an individual
+        consumer acting wholly for personal or household purposes where applicable consumer law
+        prohibits it, and it does not cover a claim caused by our own breach or misconduct.
+      </p>
+    </section>
+
+    <section aria-labelledby="law">
+      <h2 id="law">16. Governing law and disputes</h2>
+      <p>
+        Before filing a claim, please contact us with a concise description and requested remedy
+        so that both sides can try in good faith to resolve it informally. This request does not
+        limit either party's right to seek urgent relief or affect any applicable limitation
+        period or non-waivable procedural right. These Terms are governed by the laws of Ukraine,
+        without regard to conflict-of-law rules. Subject to the consumer protections in the next
+        paragraph, courts of competent jurisdiction in Kyiv, Ukraine, have non-exclusive
+        jurisdiction over disputes arising from these Terms or Twili.
+      </p>
+      <p>
+        If you are a consumer, the governing-law and jurisdiction provisions above do not deprive
+        you of mandatory consumer protections under the law of your country, state, province, or
+        other place of habitual residence. They do not require you to litigate only in Kyiv where
+        mandatory law gives you the right to bring a claim in the courts of your residence or in
+        another forum. You may bring proceedings, use a public dispute-resolution body, or pursue
+        any other remedy available under non-waivable local law, and we will bring a claim against
+        a consumer only in a forum permitted by applicable mandatory law. The United Nations
+        Convention on Contracts for the International Sale of Goods does not apply where its
+        exclusion is permitted.
+      </p>
+    </section>
+
+    <section aria-labelledby="general">
+      <h2 id="general">17. General terms</h2>
+      <p>
+        These Terms and the incorporated documents are the agreement about Twili, without
+        excluding representations or rights that law makes non-excludable. If a provision is
+        unlawful or unenforceable, it will be narrowed to the minimum extent needed, or severed if
+        narrowing is impossible; the remaining provisions continue. A delay in enforcement is not
+        a waiver. You may not assign this agreement without our consent, except where mandatory
+        law permits. We may assign it as part of a merger, reorganization, or transfer of Twili,
+        provided your rights are not materially reduced without required notice.
+      </p>
+      <p>
+        Section headings are for convenience. “Including” means “including without limitation.”
+        Electronic notices may be delivered through the app, the legal pages, or another method
+        permitted by law. If a translated version conflicts with the English version, the English
+        version controls only to the extent permitted by mandatory local law.
+      </p>
+    </section>
+
+    <section aria-labelledby="apple">
+      <h2 id="apple">18. Additional Apple App Store terms</h2>
+      <p>
+        These Terms govern Twili’s service and related content. Unless a custom end-user license
+        is separately made available for Twili through App Store Connect, the Apple Standard EULA
+        governs the license to the iOS app. The acknowledgements below supplement that license and
+        do not replace or reduce an Apple Usage Rule or user protection.
+      </p>
+      <ol>
+        <li><strong>Acknowledgement.</strong> This agreement is between you and us, not Apple. We, not Apple, are responsible for Twili and its content.</li>
+        <li><strong>License scope.</strong> The license is non-transferable and limited to use on Apple-branded products you own or control as permitted by Apple’s Usage Rules, including permitted Family Sharing or volume purchasing.</li>
+        <li><strong>Maintenance and support.</strong> We are solely responsible for maintenance and support required by these Terms or law. Apple has no obligation to provide maintenance or support for Twili.</li>
+        <li><strong>Warranty.</strong> We are responsible for product warranties to the extent they are not validly disclaimed. If Twili fails to conform to an applicable warranty, you may notify Apple, and Apple will refund any purchase price paid for the licensed app itself; this clause does not promise a refund of subscription fees, which are handled under Apple’s refund rules and mandatory law. To the maximum extent permitted by law, Apple has no other warranty obligation, and we are responsible for other claims, losses, liabilities, damages, costs, or expenses attributable to a warranty failure.</li>
+        <li><strong>Product claims.</strong> We, not Apple, are responsible for addressing claims relating to Twili or your possession or use of it, including product-liability, regulatory, consumer-protection, and privacy claims.</li>
+        <li><strong>Intellectual-property claims.</strong> If a third party claims that Twili or your possession and use of it infringes intellectual-property rights, we, not Apple, are responsible for the investigation, defense, settlement, and discharge of that claim.</li>
+        <li><strong>Legal compliance.</strong> You represent that you are not located in a country subject to a U.S. Government embargo or designated as supporting terrorism and are not listed on a U.S. Government prohibited or restricted-party list. You will comply with applicable export-control and sanctions laws.</li>
+        <li><strong>Third-party terms.</strong> You must comply with applicable third-party agreements when using Twili, including your wireless-data agreement and Apple’s terms.</li>
+        <li><strong>Third-party beneficiary.</strong> Apple and its subsidiaries are third-party beneficiaries of these Terms. On your acceptance, Apple has the right to enforce these Terms against you as a third-party beneficiary.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">19. Operator and contact information</h2>
+      <p>
+        Direct questions, complaints, support requests, legal notices, privacy or child-data
+        requests, and data-deletion requests to the operator below. You may also use Contact Us
+        in the app, but email is recommended for time-sensitive matters because the in-app form
+        does not provide an independent delivery acknowledgement. Include only the information
+        reasonably needed to identify and process your request.
+      </p>
+      <address>
+        <strong>Operator:</strong> Valerii Petrychenko<br>
+        <strong>Status:</strong> Sole Proprietor, Ukraine<br>
+        <strong>Location:</strong> Kyiv, Ukraine<br>
+        <strong>Email:</strong> <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a>
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; 2026 Twili. All rights reserved.</span>
+      <nav class="footer-links" aria-label="Footer legal links">
+        <a href="terms.html" aria-current="page">Terms of Use</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="billing.html">Subscription Terms</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
