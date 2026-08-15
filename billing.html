@@ -1,11 +1,703 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Subscription Terms - Twili</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111326">
+  <meta name="description" content="Subscription and Billing Terms for Twili auto-renewing subscriptions.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Subscription &amp; Billing Terms — Twili</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #0b0d19;
+      --surface: rgba(24, 27, 50, 0.88);
+      --surface-strong: #1c203b;
+      --border: rgba(219, 205, 255, 0.16);
+      --text: #f7f5ff;
+      --muted: #c6c1d8;
+      --accent: #c9a7ff;
+      --accent-strong: #e8d9ff;
+      --focus: #f4c86a;
+      --max-width: 820px;
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-width: 280px;
+      background:
+        radial-gradient(circle at 12% -5%, rgba(140, 92, 246, 0.24), transparent 36rem),
+        radial-gradient(circle at 92% 18%, rgba(228, 134, 239, 0.12), transparent 30rem),
+        var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: var(--accent-strong);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover { color: #ffffff; }
+
+    a:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 12px;
+      left: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #111326;
+      font-weight: 700;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid var(--border);
+      background: rgba(11, 13, 25, 0.84);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 13px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--text);
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      background: rgba(201, 167, 255, 0.13);
+      color: var(--text);
+    }
+
+    main {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 58px 0 72px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(2.25rem, 8vw, 4.2rem);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+    }
+
+    .lede {
+      max-width: 700px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+    }
+
+    .dates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .summary {
+      margin: 36px 0 24px;
+      padding: 24px;
+      border: 1px solid rgba(201, 167, 255, 0.3);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(101, 70, 176, 0.28), rgba(28, 32, 59, 0.72));
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    .summary h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    .summary ul {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 0;
+      padding-left: 1.25rem;
+    }
+
+    .summary strong { color: #ffffff; }
+
+    section {
+      margin: 18px 0;
+      padding: clamp(22px, 5vw, 34px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 14px 44px rgba(0, 0, 0, 0.14);
+    }
+
+    section h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.25rem, 4vw, 1.55rem);
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+    }
+
+    p { margin: 0 0 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul,
+    ol { padding-left: 1.35rem; }
+
+    li + li { margin-top: 8px; }
+
+    .table-wrap {
+      margin: 18px 0;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+      font-size: 0.93rem;
+    }
+
+    caption {
+      padding: 12px 15px;
+      background: rgba(201, 167, 255, 0.05);
+      color: var(--muted);
+      font-weight: 650;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 13px 15px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    tbody tr:last-child > * { border-bottom: 0; }
+
+    th {
+      background: rgba(201, 167, 255, 0.08);
+      color: var(--accent-strong);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    tbody th {
+      background: transparent;
+      color: var(--text);
+      font-size: 0.93rem;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    .notice {
+      margin: 18px 0 0;
+      padding: 16px 18px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      background: rgba(201, 167, 255, 0.08);
+      color: var(--muted);
+    }
+
+    .steps {
+      margin-bottom: 0;
+      padding-left: 1.4rem;
+    }
+
+    address {
+      font-style: normal;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+      font-size: 0.85rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    @media (max-width: 640px) {
+      .site-header { position: static; }
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      nav ul { justify-content: flex-start; }
+      nav a { padding: 6px 8px; }
+      main { padding-top: 40px; }
+      .summary { padding: 21px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    @media print {
+      :root { color-scheme: light; }
+
+      body {
+        background: #ffffff;
+        color: #111111;
+        font-size: 11pt;
+      }
+
+      .site-header,
+      .skip-link { display: none; }
+
+      main {
+        width: 100%;
+        padding: 0;
+      }
+
+      .lede,
+      .dates,
+      address,
+      footer { color: #333333; }
+
+      .summary,
+      section {
+        break-inside: avoid;
+        border: 1px solid #cccccc;
+        background: #ffffff;
+        box-shadow: none;
+      }
+
+      a { color: #111111; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Subscription Terms</h1>
-  <p>Coming soon...</p>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="terms.html" aria-label="Twili legal home">Twili</a>
+      <nav aria-label="Legal documents">
+        <ul>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="billing.html" aria-current="page">Subscription Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <header>
+      <p class="eyebrow">Twili legal</p>
+      <h1>Subscription &amp; Billing Terms</h1>
+      <p class="lede">
+        These terms explain how Twili Premium subscriptions are purchased, renewed, managed,
+        canceled, restored, and refunded through Apple’s App Store.
+      </p>
+      <p class="dates">
+        <span><strong>Effective:</strong> August 15, 2026</span>
+        <span><strong>Last updated:</strong> August 15, 2026</span>
+      </p>
+    </header>
+
+    <aside class="summary" aria-labelledby="key-terms-title">
+      <h2 id="key-terms-title">Key terms at a glance</h2>
+      <ul>
+        <li>Twili currently offers <strong>weekly and yearly auto-renewing subscriptions</strong>.</li>
+        <li>A free trial applies <strong>only if Apple’s purchase sheet expressly displays one</strong> before confirmation. Otherwise payment begins when you confirm the purchase with Apple.</li>
+        <li>The <strong>localized price, currency, billing period, and any offer shown in Apple’s purchase sheet</strong> are the authoritative terms of your purchase.</li>
+        <li>Subscriptions renew automatically unless canceled. To avoid the next charge, cancel before the renewal date shown by Apple.</li>
+        <li>Apple processes payments and refund requests. Deleting Twili, uninstalling it, or deleting in-app data does not cancel a subscription.</li>
+      </ul>
+    </aside>
+
+    <section aria-labelledby="scope">
+      <h2 id="scope">1. Scope and acceptance</h2>
+      <p>
+        These Subscription &amp; Billing Terms (the “Subscription Terms”) are between you and
+        the operator of Twili identified in Section 12 (“Twili,” “we,” “us,” or “our”). They
+        apply to auto-renewing subscriptions purchased in the Twili iOS app through Apple’s
+        in-app purchase system.
+      </p>
+      <p>
+        By selecting a plan, tapping the purchase button, and confirming the transaction in
+        Apple’s system purchase sheet, you authorize the charge shown and agree to these
+        Subscription Terms. If you do not agree, do not confirm the purchase. You must be
+        legally capable of entering into this agreement and authorized to use the selected
+        Apple Account and payment method. The adult purchaser remains responsible for the
+        subscription. A child may read or listen to adult-reviewed content while an adult operates
+        Twili, but a child must not purchase or operate the account independently.
+      </p>
+    </section>
+
+    <section aria-labelledby="plans">
+      <h2 id="plans">2. Plans, access, and current trial status</h2>
+      <p>
+        Twili may make the following plans available. Actual availability can vary by App
+        Store country or region, app version, eligibility, and device.
+      </p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Twili subscription plan comparison">
+        <table>
+          <caption>Current Twili subscription plans</caption>
+          <thead>
+            <tr>
+              <th scope="col">Plan</th>
+              <th scope="col">Billing period</th>
+              <th scope="col">Renewal</th>
+              <th scope="col">Trial or offer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Weekly</th>
+              <td>One week</td>
+              <td>Every week until canceled</td>
+              <td>Only if displayed by Apple before confirmation</td>
+            </tr>
+            <tr>
+              <th scope="row">Yearly</th>
+              <td>One year, charged as a full annual amount</td>
+              <td>Every year until canceled</td>
+              <td>Only if displayed by Apple before confirmation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        While Apple and Twili recognize your subscription as active, it unlocks Twili Premium
+        entitlement and the paid features described on the paywall or purchase screen. Unless
+        the purchase screen expressly says otherwise, weekly and yearly plans provide the same
+        category of paid access and differ by billing period. Any monthly equivalent shown
+        for a yearly plan is a comparison only; the annual price is charged according to the
+        Apple purchase sheet.
+      </p>
+      <p class="notice">
+        A button such as “Continue” initiates Apple’s purchase flow; the transaction is not
+        complete until you confirm it with Apple. If Apple’s purchase sheet does not expressly
+        display a trial or introductory offer, none applies to that purchase.
+      </p>
+    </section>
+
+    <section aria-labelledby="price">
+      <h2 id="price">3. Price, purchase confirmation, and taxes</h2>
+      <p>
+        Twili obtains localized product information through Apple’s StoreKit infrastructure.
+        Before you confirm, Apple displays the applicable price, currency, subscription period,
+        and purchase controls for your App Store storefront. If an estimate, converted amount,
+        screenshot, website, or other promotional statement differs, the Apple purchase sheet
+        and final Apple confirmation govern.
+      </p>
+      <p>
+        Apple charges the payment method associated with your Apple Account when the purchase
+        is confirmed. Prices may include or exclude sales tax, VAT, GST, or similar taxes
+        depending on your storefront and applicable law. Apple calculates, collects, and remits
+        taxes where required. Your bank or payment provider may separately impose currency,
+        cross-border, or other fees that neither Twili nor Apple displays as part of the
+        subscription price.
+      </p>
+      <p>
+        Apple provides the transaction receipt and controls payment authorization, settlement,
+        and billing records. Twili does not receive or store your full payment-card details.
+      </p>
+    </section>
+
+    <section aria-labelledby="renewal">
+      <h2 id="renewal">4. Automatic renewal and failed payments</h2>
+      <p>
+        Each subscription automatically renews for another period of the same duration unless
+        you cancel it before renewal. Apple may charge your payment method within 24 hours
+        before the start of the next subscription period. The renewal date and status shown by
+        Apple are authoritative; do not calculate them solely from the original purchase time.
+      </p>
+      <p>
+        If Apple cannot collect payment, Apple may retry billing or provide a billing grace
+        period under its policies. Access may continue temporarily or may expire while payment
+        is unresolved. Twili does not guarantee a grace period. You are responsible for keeping
+        your Apple payment information current, and Apple controls whether and when a renewal
+        succeeds.
+      </p>
+    </section>
+
+    <section aria-labelledby="manage">
+      <h2 id="manage">5. Manage, switch, or cancel</h2>
+      <p>
+        You can manage or cancel through Twili’s “Manage Subscription” link, through
+        <a href="https://apps.apple.com/account/subscriptions" rel="external">Apple’s subscription management page</a>,
+        or on iPhone or iPad:
+      </p>
+      <ol class="steps">
+        <li>Open <strong>Settings</strong>.</li>
+        <li>Tap your name, then <strong>Subscriptions</strong>.</li>
+        <li>Select <strong>Twili</strong>.</li>
+        <li>Choose another available plan or tap <strong>Cancel Subscription</strong>.</li>
+      </ol>
+      <p>
+        Plan changes are handled by Apple. Apple determines when a switch takes effect and
+        whether a prorated credit, refund, or new charge applies, and displays the relevant
+        information before confirmation.
+      </p>
+      <p>
+        Cancellation normally takes effect at the end of the already-paid period, so you may
+        retain paid access until the expiration date shown by Apple unless the transaction is
+        refunded, revoked, or applicable law requires a different result. Cancelling stops future
+        renewal; it does not by itself refund the current period.
+      </p>
+      <p class="notice">
+        Uninstalling Twili, deleting an account or in-app data, or simply stopping use does not
+        cancel Apple billing. You must cancel through Apple. If you also want to stop future
+        charges after requesting data or account deletion, cancel the subscription separately
+        through Apple.
+      </p>
+    </section>
+
+    <section aria-labelledby="restore-refund">
+      <h2 id="restore-refund">6. Restore purchases and request a refund</h2>
+      <h3>Restore</h3>
+      <p>
+        If an active subscription is not recognized, make sure you are signed in with the Apple
+        Account used for the purchase, then use <strong>Restore Purchases</strong> in Twili.
+        Restoration validates eligible transactions with Apple and does not create a new charge.
+        It cannot reactivate an expired subscription or override an Apple refund or revocation.
+      </p>
+      <h3>Refunds</h3>
+      <p>
+        Apple administers App Store charges and decides refund eligibility under its policies and
+        applicable law. To request a refund, visit
+        <a href="https://reportaproblem.apple.com/" rel="external">reportaproblem.apple.com</a>
+        and sign in with the Apple Account used for the purchase. Cancelling a subscription does
+        not automatically submit a refund request. Twili support can help investigate access
+        problems, but does not control Apple’s refund decision or processing time.
+      </p>
+      <p>
+        If Apple refunds or reverses a transaction, paid access may end immediately. Nothing in
+        this section limits a refund, withdrawal, cancellation, or other remedy that cannot
+        lawfully be excluded in your country or region.
+      </p>
+    </section>
+
+    <section aria-labelledby="offers">
+      <h2 id="offers">7. Promotions, trials, and offer eligibility</h2>
+      <p>
+        A trial, introductory price, promotional offer, or offer code is available only when it
+        is expressly displayed in Apple’s purchase sheet. We may make such an offer available
+        to eligible users. Apple determines eligibility, and offers may be limited by storefront,
+        account history, time, or other disclosed conditions.
+      </p>
+      <p>
+        An offer applies only if it is expressly displayed in Apple’s purchase sheet before you
+        confirm. The sheet will state the offer price and duration and, where applicable, the
+        standard price and renewal terms that follow. If no offer appears there, the standard
+        subscription terms apply. Unless the offer states otherwise, the subscription continues
+        at the displayed standard renewal price after the offer period until canceled.
+      </p>
+    </section>
+
+    <section aria-labelledby="limits">
+      <h2 id="limits">8. Entitlement, feature limits, and availability</h2>
+      <p>
+        Paid access depends on a valid Apple transaction and an active Twili Premium entitlement.
+        Twili may use a subscription-management provider to validate that status. Apple
+        administers App Store billing and payment collection under the Apple terms applicable
+        to your storefront. Network delays can
+        occasionally postpone entitlement recognition; try restoring purchases and contact us
+        if access is still missing after Apple confirms the charge.
+      </p>
+      <p>
+        A subscription gives you a limited right to use the paid Twili features made available
+        during the active period; it is not ownership of the app, underlying technology, or
+        generated services. Features such as personalized story generation may require internet
+        access and may be subject to clearly disclosed generation allowances, safety controls,
+        fair-use protections, technical capacity limits, or temporary maintenance. Any specific
+        quantity or usage limit shown on the paywall or in the app forms part of the applicable
+        offering. A subscription should not be interpreted as an unlimited-use promise unless
+        Twili expressly labels the relevant feature “unlimited.”
+      </p>
+      <p>
+        We may suspend access where reasonably necessary to address fraud, payment reversal,
+        security threats, illegal activity, or a material breach of the
+        <a href="terms.html">Terms of Use</a>. Suspension in Twili does not itself cancel an
+        Apple subscription, so you must still manage billing through Apple. If we permanently
+        discontinue a paid service during an active period, we will provide any notice or remedy
+        required by applicable law and Apple’s rules.
+      </p>
+    </section>
+
+    <section aria-labelledby="changes">
+      <h2 id="changes">9. Price, plan, and term changes</h2>
+      <p>
+        We may add, remove, or modify plans and may change subscription prices prospectively.
+        A new price does not apply to a renewal unless Apple processes it in accordance with
+        App Store rules. Apple may notify you by email, push notification, or an in-app system
+        message and will request your consent where required. If required consent is not given,
+        the subscription may expire instead of renewing at the new price.
+      </p>
+      <p>
+        We may update these Subscription Terms to reflect product, legal, or operational changes.
+        The “Last updated” date identifies the current version. Material changes will apply
+        prospectively, and we will provide notice where required. Changes do not reduce
+        non-waivable rights or retroactively alter a completed charge.
+      </p>
+    </section>
+
+    <section aria-labelledby="family">
+      <h2 id="family">10. Family Sharing</h2>
+      <p>
+        Family Sharing is not promised as part of a Twili subscription. It is available only if
+        Apple expressly identifies the selected Twili product as shareable in the App Store or
+        purchase interface. If enabled, sharing is subject to Apple’s Family Sharing eligibility,
+        account, country or region, and usage rules. A family organizer’s purchase, cancellation,
+        or account change may affect other family members’ access.
+      </p>
+    </section>
+
+    <section aria-labelledby="apple-rights">
+      <h2 id="apple-rights">11. Apple terms and mandatory consumer rights</h2>
+      <p>
+        Your App Store transaction is also governed by the Apple Media Services Terms and the
+        rules for your Apple storefront. For Apple’s current instructions, see
+        <a href="https://support.apple.com/en-us/118428" rel="external">how to cancel an Apple subscription</a>
+        and
+        <a href="https://support.apple.com/en-us/108096" rel="external">how to restore an in-app purchase</a>.
+        Apple is not responsible for Twili’s content or operation except to the extent stated in
+        Apple’s own terms or required by law.
+      </p>
+      <p>
+        These Subscription Terms do not exclude, restrict, or modify statutory guarantees,
+        cooling-off rights, refund rights, or other consumer protections that cannot lawfully be
+        waived. If mandatory law in your place of residence gives you greater protection, that
+        law prevails to the extent of the conflict.
+      </p>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">12. Contact and related terms</h2>
+      <p>
+        For a missing entitlement or another Twili access issue, contact us and include the date
+        of purchase, plan, App Store country or region, and Apple order number if available.
+        Never send your Apple Account password or full payment-card details.
+      </p>
+      <address>
+        <strong>Operator:</strong> Valerii Petrychenko<br>
+        <strong>Business status:</strong> Sole Proprietor, Ukraine<br>
+        <strong>Business location:</strong> Kyiv, Ukraine<br>
+        <strong>Support, privacy, and legal email:</strong>
+        <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a>
+      </address>
+      <p>
+        Billing disputes, refund requests, and payment-method questions should also be directed
+        to Apple because Apple processes the transaction.
+      </p>
+      <p>
+        These Subscription Terms supplement the <a href="terms.html">Terms of Use</a>, which
+        govern use of Twili generally. The <a href="privacy.html">Privacy Policy</a> explains
+        how information is handled. If the documents conflict, these Subscription Terms control
+        only for subscription and billing matters; Apple’s purchase sheet, Apple’s applicable
+        terms, and mandatory law control for matters Apple administers.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; 2026 Twili. All rights reserved.</span>
+      <nav class="footer-links" aria-label="Footer legal links">
+        <a href="terms.html">Terms of Use</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="billing.html" aria-current="page">Subscription Terms</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
