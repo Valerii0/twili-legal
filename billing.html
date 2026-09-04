@@ -6,368 +6,14 @@
   <meta name="theme-color" content="#111326">
   <meta name="description" content="Subscription and Billing Terms for Twili auto-renewing subscriptions.">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Subscription &amp; Billing Terms — Twili</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --background: #0b0d19;
-      --surface: rgba(24, 27, 50, 0.88);
-      --surface-strong: #1c203b;
-      --border: rgba(219, 205, 255, 0.16);
-      --text: #f7f5ff;
-      --muted: #c6c1d8;
-      --accent: #c9a7ff;
-      --accent-strong: #e8d9ff;
-      --focus: #f4c86a;
-      --max-width: 820px;
-      --radius: 22px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 5rem;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      margin: 0;
-      min-width: 280px;
-      background:
-        radial-gradient(circle at 12% -5%, rgba(140, 92, 246, 0.24), transparent 36rem),
-        radial-gradient(circle at 92% 18%, rgba(228, 134, 239, 0.12), transparent 30rem),
-        var(--background);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.65;
-      overflow-wrap: anywhere;
-    }
-
-    a {
-      color: var(--accent-strong);
-      text-decoration-thickness: 0.08em;
-      text-underline-offset: 0.18em;
-    }
-
-    a:hover { color: #ffffff; }
-
-    a:focus-visible,
-    [tabindex]:focus-visible {
-      outline: 3px solid var(--focus);
-      outline-offset: 4px;
-      border-radius: 4px;
-    }
-
-    .skip-link {
-      position: fixed;
-      z-index: 100;
-      top: 12px;
-      left: 12px;
-      padding: 10px 14px;
-      border-radius: 10px;
-      background: #ffffff;
-      color: #111326;
-      font-weight: 700;
-      transform: translateY(-150%);
-    }
-
-    .skip-link:focus { transform: translateY(0); }
-
-    .site-header {
-      position: sticky;
-      z-index: 20;
-      top: 0;
-      border-bottom: 1px solid var(--border);
-      background: rgba(11, 13, 25, 0.84);
-      -webkit-backdrop-filter: blur(18px);
-      backdrop-filter: blur(18px);
-    }
-
-    .header-inner {
-      width: min(calc(100% - 32px), var(--max-width));
-      margin: 0 auto;
-      padding: 13px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      color: var(--text);
-      font-size: 1.1rem;
-      font-weight: 800;
-      letter-spacing: 0.01em;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 6px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    nav a {
-      display: inline-block;
-      padding: 7px 10px;
-      border-radius: 10px;
-      color: var(--muted);
-      font-size: 0.84rem;
-      font-weight: 650;
-      text-decoration: none;
-    }
-
-    nav a:hover,
-    nav a[aria-current="page"] {
-      background: rgba(201, 167, 255, 0.13);
-      color: var(--text);
-    }
-
-    main {
-      width: min(calc(100% - 32px), var(--max-width));
-      margin: 0 auto;
-      padding: 58px 0 72px;
-    }
-
-    .eyebrow {
-      margin: 0 0 12px;
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      max-width: 720px;
-      margin: 0;
-      font-size: clamp(2.25rem, 8vw, 4.2rem);
-      line-height: 1.02;
-      letter-spacing: -0.045em;
-    }
-
-    .lede {
-      max-width: 700px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: clamp(1.05rem, 2.2vw, 1.2rem);
-    }
-
-    .dates {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 18px;
-      margin: 24px 0 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .summary {
-      margin: 36px 0 24px;
-      padding: 24px;
-      border: 1px solid rgba(201, 167, 255, 0.3);
-      border-radius: var(--radius);
-      background: linear-gradient(135deg, rgba(101, 70, 176, 0.28), rgba(28, 32, 59, 0.72));
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-    }
-
-    .summary h2 {
-      margin-top: 0;
-      font-size: 1.25rem;
-    }
-
-    .summary ul {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 0;
-      padding-left: 1.25rem;
-    }
-
-    .summary strong { color: #ffffff; }
-
-    section {
-      margin: 18px 0;
-      padding: clamp(22px, 5vw, 34px);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--surface);
-      box-shadow: 0 14px 44px rgba(0, 0, 0, 0.14);
-    }
-
-    section h2 {
-      margin: 0 0 14px;
-      font-size: clamp(1.25rem, 4vw, 1.55rem);
-      line-height: 1.25;
-      letter-spacing: -0.015em;
-    }
-
-    h3 {
-      margin: 24px 0 8px;
-      font-size: 1.05rem;
-    }
-
-    p { margin: 0 0 14px; }
-    p:last-child { margin-bottom: 0; }
-
-    ul,
-    ol { padding-left: 1.35rem; }
-
-    li + li { margin-top: 8px; }
-
-    .table-wrap {
-      margin: 18px 0;
-      overflow-x: auto;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-    }
-
-    table {
-      width: 100%;
-      min-width: 560px;
-      border-collapse: collapse;
-      font-size: 0.93rem;
-    }
-
-    caption {
-      padding: 12px 15px;
-      background: rgba(201, 167, 255, 0.05);
-      color: var(--muted);
-      font-weight: 650;
-      text-align: left;
-    }
-
-    th,
-    td {
-      padding: 13px 15px;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-      vertical-align: top;
-    }
-
-    tbody tr:last-child > * { border-bottom: 0; }
-
-    th {
-      background: rgba(201, 167, 255, 0.08);
-      color: var(--accent-strong);
-      font-size: 0.78rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    tbody th {
-      background: transparent;
-      color: var(--text);
-      font-size: 0.93rem;
-      letter-spacing: normal;
-      text-transform: none;
-    }
-
-    .notice {
-      margin: 18px 0 0;
-      padding: 16px 18px;
-      border-left: 3px solid var(--accent);
-      border-radius: 0 12px 12px 0;
-      background: rgba(201, 167, 255, 0.08);
-      color: var(--muted);
-    }
-
-    .steps {
-      margin-bottom: 0;
-      padding-left: 1.4rem;
-    }
-
-    address {
-      font-style: normal;
-      color: var(--muted);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-    }
-
-    .footer-inner {
-      width: min(calc(100% - 32px), var(--max-width));
-      margin: 0 auto;
-      padding: 28px 0 40px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px 24px;
-      font-size: 0.85rem;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 18px;
-    }
-
-    @media (max-width: 640px) {
-      .site-header { position: static; }
-      .header-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 6px;
-      }
-
-      nav ul { justify-content: flex-start; }
-      nav a { padding: 6px 8px; }
-      main { padding-top: 40px; }
-      .summary { padding: 21px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-    }
-
-    @media print {
-      :root { color-scheme: light; }
-
-      body {
-        background: #ffffff;
-        color: #111111;
-        font-size: 11pt;
-      }
-
-      .site-header,
-      .skip-link { display: none; }
-
-      main {
-        width: 100%;
-        padding: 0;
-      }
-
-      .lede,
-      .dates,
-      address,
-      footer { color: #333333; }
-
-      .summary,
-      section {
-        break-inside: avoid;
-        border: 1px solid #cccccc;
-        background: #ffffff;
-        box-shadow: none;
-      }
-
-      a { color: #111111; }
-    }
-  </style>
+  <title>Subscription Terms — Twili</title>
+  <link rel="stylesheet" href="legal.css">
 </head>
-<body>
+<body class="page-billing">
   <a class="skip-link" href="#main-content">Skip to main content</a>
-
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="terms.html" aria-label="Twili legal home">Twili</a>
+      <a class="brand" href="terms.html" aria-label="Twili legal home">Twili<span>Legal</span></a>
       <nav aria-label="Legal documents">
         <ul>
           <li><a href="terms.html">Terms of Use</a></li>
@@ -381,21 +27,39 @@
   <main id="main-content">
     <header>
       <p class="eyebrow">Twili legal</p>
-      <h1>Subscription &amp; Billing Terms</h1>
+      <h1>Subscription Terms</h1>
       <p class="lede">
         These terms explain how Twili Premium subscriptions are purchased, renewed, managed,
         canceled, restored, and refunded through Apple’s App Store.
       </p>
       <p class="dates">
         <span><strong>Effective:</strong> August 15, 2026</span>
-        <span><strong>Last updated:</strong> August 15, 2026</span>
+        <span><strong>Last updated:</strong> September 4, 2026</span>
       </p>
     </header>
+    <details class="contents">
+      <summary>On this page</summary>
+      <nav aria-label="Page contents"><ol>
+        <li><a href="#scope">Scope and acceptance</a></li>
+        <li><a href="#plans">Plans, access, and current trial status</a></li>
+        <li><a href="#price">Price, purchase confirmation, and taxes</a></li>
+        <li><a href="#renewal">Automatic renewal and failed payments</a></li>
+        <li><a href="#manage">Manage, switch, or cancel</a></li>
+        <li><a href="#restore-refund">Restore purchases and request a refund</a></li>
+        <li><a href="#offers">Promotions, trials, and offer eligibility</a></li>
+        <li><a href="#limits">Entitlement, feature limits, and availability</a></li>
+        <li><a href="#changes">Price, plan, and term changes</a></li>
+        <li><a href="#family">Family Sharing</a></li>
+        <li><a href="#apple-rights">Apple terms and mandatory consumer rights</a></li>
+        <li><a href="#contact">Contact and related terms</a></li>
+      </ol></nav>
+    </details>
+
 
     <aside class="summary" aria-labelledby="key-terms-title">
       <h2 id="key-terms-title">Key terms at a glance</h2>
       <ul>
-        <li>Twili currently offers <strong>weekly and yearly auto-renewing subscriptions</strong>.</li>
+        <li>Twili currently offers <strong>monthly and yearly auto-renewing subscriptions</strong>.</li>
         <li>A free trial applies <strong>only if Apple’s purchase sheet expressly displays one</strong> before confirmation. Otherwise payment begins when you confirm the purchase with Apple.</li>
         <li>The <strong>localized price, currency, billing period, and any offer shown in Apple’s purchase sheet</strong> are the authoritative terms of your purchase.</li>
         <li>Subscriptions renew automatically unless canceled. To avoid the next charge, cancel before the renewal date shown by Apple.</li>
@@ -406,7 +70,7 @@
     <section aria-labelledby="scope">
       <h2 id="scope">1. Scope and acceptance</h2>
       <p>
-        These Subscription &amp; Billing Terms (the “Subscription Terms”) are between you and
+        These Subscription Terms (the “Subscription Terms”) are between you and
         the operator of Twili identified in Section 12 (“Twili,” “we,” “us,” or “our”). They
         apply to auto-renewing subscriptions purchased in the Twili iOS app through Apple’s
         in-app purchase system.
@@ -426,7 +90,9 @@
       <h2 id="plans">2. Plans, access, and current trial status</h2>
       <p>
         Twili may make the following plans available. Actual availability can vary by App
-        Store country or region, app version, eligibility, and device.
+        Store country or region, app version, eligibility, and device. The monthly plan may
+        include a 7-day introductory free trial for eligible customers. A trial is not
+        guaranteed: Apple’s purchase sheet confirms the offer and its duration.
       </p>
       <div class="table-wrap" tabindex="0" role="region" aria-label="Twili subscription plan comparison">
         <table>
@@ -441,9 +107,9 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Weekly</th>
-              <td>One week</td>
-              <td>Every week until canceled</td>
+              <th scope="row">Monthly</th>
+              <td>One month</td>
+              <td>Every month until canceled</td>
               <td>Only if displayed by Apple before confirmation</td>
             </tr>
             <tr>
@@ -458,7 +124,7 @@
       <p>
         While Apple and Twili recognize your subscription as active, it unlocks Twili Premium
         entitlement and the paid features described on the paywall or purchase screen. Unless
-        the purchase screen expressly says otherwise, weekly and yearly plans provide the same
+        the purchase screen expressly says otherwise, monthly and yearly plans provide the same
         category of paid access and differ by billing period. Any monthly equivalent shown
         for a yearly plan is a comparison only; the annual price is charged according to the
         Apple purchase sheet.
@@ -513,7 +179,7 @@
     <section aria-labelledby="manage">
       <h2 id="manage">5. Manage, switch, or cancel</h2>
       <p>
-        You can manage or cancel through Twili’s “Manage Subscription” link, through
+        You can manage or cancel through
         <a href="https://apps.apple.com/account/subscriptions" rel="external">Apple’s subscription management page</a>,
         or on iPhone or iPad:
       </p>
@@ -581,6 +247,8 @@
         standard price and renewal terms that follow. If no offer appears there, the standard
         subscription terms apply. Unless the offer states otherwise, the subscription continues
         at the displayed standard renewal price after the offer period until canceled.
+        If you do not want a free or discounted trial to renew, Apple advises canceling
+        at least 24 hours before the trial ends.
       </p>
     </section>
 

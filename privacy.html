@@ -3,362 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="dark">
   <meta name="description" content="Privacy Policy for the Twili personalized storytelling app.">
   <title>Privacy Policy — Twili</title>
-  <style>
-    :root {
-      --bg: #f7f4fb;
-      --surface: #ffffff;
-      --surface-soft: #f1ebf8;
-      --text: #211b2b;
-      --muted: #675d72;
-      --brand: #7138a6;
-      --brand-dark: #51227d;
-      --border: #ddd2e8;
-      --shadow: 0 12px 40px rgba(56, 31, 78, .08);
-      --radius: 18px;
-      --max: 920px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 5rem;
-    }
-
-    body {
-      margin: 0;
-      background:
-        radial-gradient(circle at 10% 0, rgba(188, 135, 232, .16), transparent 28rem),
-        var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.68;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: var(--brand-dark); text-underline-offset: .18em; }
-    a:hover { text-decoration-thickness: 2px; }
-
-    a:focus-visible,
-    summary:focus-visible {
-      outline: 3px solid #b368ef;
-      outline-offset: 3px;
-      border-radius: 4px;
-    }
-
-    .skip-link {
-      position: fixed;
-      top: .75rem;
-      left: .75rem;
-      z-index: 100;
-      transform: translateY(-180%);
-      padding: .65rem .9rem;
-      border-radius: 10px;
-      background: var(--text);
-      color: var(--surface);
-      font-weight: 700;
-    }
-
-    .skip-link:focus { transform: translateY(0); }
-
-    .site-nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      border-bottom: 1px solid rgba(113, 56, 166, .15);
-      background: rgba(247, 244, 251, .92);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-
-    .site-nav-inner {
-      width: min(calc(100% - 2rem), var(--max));
-      margin: 0 auto;
-      min-height: 4.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .brand {
-      color: var(--text);
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: -.02em;
-      text-decoration: none;
-    }
-
-    .legal-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: .3rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .legal-links a {
-      display: inline-block;
-      padding: .4rem .6rem;
-      border-radius: 9px;
-      color: var(--muted);
-      font-size: .92rem;
-      font-weight: 650;
-      text-decoration: none;
-    }
-
-    .legal-links a:hover,
-    .legal-links a[aria-current="page"] {
-      background: var(--surface-soft);
-      color: var(--brand-dark);
-    }
-
-    main {
-      width: min(calc(100% - 2rem), var(--max));
-      margin: 2.5rem auto 4rem;
-    }
-
-    .hero,
-    .section-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--surface);
-      box-shadow: var(--shadow);
-    }
-
-    .hero { padding: clamp(1.4rem, 4vw, 2.5rem); }
-
-    .eyebrow {
-      margin: 0 0 .35rem;
-      color: var(--brand);
-      font-size: .78rem;
-      font-weight: 800;
-      letter-spacing: .11em;
-      text-transform: uppercase;
-    }
-
-    h1, h2, h3 {
-      line-height: 1.22;
-      letter-spacing: -.025em;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.15rem, 7vw, 3.8rem);
-    }
-
-    h2 {
-      margin: 0 0 1rem;
-      font-size: clamp(1.45rem, 4vw, 2rem);
-    }
-
-    h3 {
-      margin: 1.6rem 0 .55rem;
-      font-size: 1.16rem;
-    }
-
-    p, ul, ol { margin-top: .65rem; margin-bottom: .9rem; }
-    li + li { margin-top: .45rem; }
-
-    .dates {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .5rem 1rem;
-      margin: .8rem 0 1.2rem;
-      color: var(--muted);
-      font-size: .94rem;
-    }
-
-    .lead {
-      max-width: 72ch;
-      margin-bottom: 0;
-      font-size: 1.08rem;
-      color: var(--muted);
-    }
-
-    .toc {
-      margin: 1.25rem 0;
-      padding: 1.15rem 1.25rem;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background: var(--surface-soft);
-    }
-
-    .toc h2 { font-size: 1.1rem; }
-    .toc ol { columns: 2; padding-left: 1.25rem; }
-    .toc li { break-inside: avoid; }
-
-    .section-card {
-      margin-top: 1.25rem;
-      padding: clamp(1.25rem, 3.5vw, 2rem);
-    }
-
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: .8rem;
-      margin-top: 1rem;
-    }
-
-    .summary-item {
-      padding: 1rem;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--surface-soft);
-    }
-
-    .summary-item strong { display: block; margin-bottom: .2rem; }
-    .summary-item p { margin: 0; color: var(--muted); font-size: .95rem; }
-
-    .table-wrap {
-      margin: 1rem 0;
-      overflow-x: auto;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-    }
-
-    table {
-      width: 100%;
-      min-width: 720px;
-      border-collapse: collapse;
-      background: var(--surface);
-      font-size: .92rem;
-    }
-
-    caption {
-      padding: .8rem 1rem;
-      background: var(--surface-soft);
-      color: var(--muted);
-      font-weight: 650;
-      text-align: left;
-    }
-
-    th, td {
-      padding: .8rem .9rem;
-      border-top: 1px solid var(--border);
-      vertical-align: top;
-      text-align: left;
-    }
-
-    th {
-      background: var(--surface-soft);
-      color: var(--text);
-      font-weight: 750;
-    }
-
-    .plain-dl {
-      display: grid;
-      grid-template-columns: minmax(9rem, 13rem) 1fr;
-      gap: .6rem 1.1rem;
-      margin: 1rem 0;
-    }
-
-    .plain-dl dt { font-weight: 750; }
-    .plain-dl dd { margin: 0; }
-
-    .fine-print { color: var(--muted); font-size: .9rem; }
-
-    footer {
-      width: min(calc(100% - 2rem), var(--max));
-      margin: 0 auto 3rem;
-      color: var(--muted);
-      font-size: .9rem;
-      text-align: center;
-    }
-
-    @media (max-width: 680px) {
-      .site-nav { position: static; }
-      .site-nav-inner { align-items: flex-start; padding: .7rem 0; }
-      .legal-links { gap: 0; }
-      .legal-links a { padding: .35rem .45rem; font-size: .82rem; }
-      main { margin-top: 1.2rem; }
-      .summary-grid { grid-template-columns: 1fr; }
-      .toc ol { columns: 1; }
-      .plain-dl { grid-template-columns: 1fr; gap: .15rem; }
-      .plain-dl dd + dt { margin-top: .65rem; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #15111b;
-        --surface: #211a2a;
-        --surface-soft: #2b2236;
-        --text: #f6f0fb;
-        --muted: #c8bbd3;
-        --brand: #d19cf2;
-        --brand-dark: #deb4f7;
-        --border: #493a58;
-        --shadow: none;
-      }
-      .site-nav { background: rgba(21, 17, 27, .92); }
-    }
-
-    @media print {
-      body { background: #fff; color: #000; font-size: 11pt; }
-      .site-nav, .skip-link, .toc { display: none; }
-      main { width: 100%; margin: 0; }
-      .hero, .section-card { break-inside: avoid; box-shadow: none; border-color: #bbb; }
-      a { color: #000; }
-      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .8em; }
-    }
-  </style>
+  <link rel="stylesheet" href="legal.css">
 </head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to policy</a>
-
-  <nav class="site-nav" aria-label="Twili legal documents">
-    <div class="site-nav-inner">
-      <a class="brand" href="terms.html" aria-label="Twili legal home">Twili</a>
-      <ul class="legal-links">
-        <li><a href="terms.html">Terms of Use</a></li>
-        <li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
-        <li><a href="billing.html">Subscription Terms</a></li>
-      </ul>
+<body class="page-privacy">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="terms.html" aria-label="Twili legal home">Twili<span>Legal</span></a>
+      <nav aria-label="Legal documents">
+        <ul>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
+          <li><a href="billing.html">Subscription Terms</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <header class="hero">
+    <header>
       <p class="eyebrow">Twili legal</p>
       <h1>Privacy Policy</h1>
-      <div class="dates" aria-label="Policy dates">
-        <span><strong>Effective:</strong> August 15, 2026</span>
-        <span><strong>Last updated:</strong> August 15, 2026</span>
-      </div>
-      <p class="lead">
+      <p class="lede">
         This Policy explains how Twili handles information when an adult creates child profiles, requests AI-generated stories, manages a subscription, or contacts us. It also explains the distinction between information kept on the device and information sent to Twili's backend and service providers.
       </p>
+      <p class="dates">
+        <span><strong>Effective:</strong> August 15, 2026</span>
+        <span><strong>Last updated:</strong> September 4, 2026</span>
+      </p>
     </header>
-
-    <nav class="toc" aria-labelledby="toc-title">
-      <h2 id="toc-title">Contents</h2>
-      <ol>
-        <li><a href="#who-we-are">Who we are</a></li>
+    <details class="contents">
+      <summary>On this page</summary>
+      <nav aria-label="Page contents"><ol>
+        <li><a href="#who-we-are">Who we are and the scope of this Policy</a></li>
         <li><a href="#summary">Plain-language summary</a></li>
-        <li><a href="#data">Information and data flows</a></li>
+        <li><a href="#data">Information we handle and where it goes</a></li>
         <li><a href="#purposes">Why we process information</a></li>
-        <li><a href="#children">Children and parents</a></li>
-        <li><a href="#sharing">Providers and disclosures</a></li>
+        <li><a href="#children">Children and parental controls</a></li>
+        <li><a href="#sharing">Service providers and other disclosures</a></li>
         <li><a href="#ai">AI processing</a></li>
-        <li><a href="#retention">Retention and deletion</a></li>
-        <li><a href="#rights">Your privacy rights</a></li>
-        <li><a href="#us-notices">U.S. state notices</a></li>
-        <li><a href="#transfers">International transfers</a></li>
+        <li><a href="#retention">Retention, local deletion, and remote deletion</a></li>
+        <li><a href="#rights">Your privacy rights and how to exercise them</a></li>
+        <li><a href="#us-notices">U.S. state privacy notices</a></li>
+        <li><a href="#transfers">International data transfers</a></li>
         <li><a href="#security">Security</a></li>
-        <li><a href="#changes">Changes</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ol>
-    </nav>
+        <li><a href="#changes">Changes to this Policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol></nav>
+    </details>
+
+
 
     <section class="section-card" id="who-we-are">
       <h2>1. Who we are and the scope of this Policy</h2>
@@ -656,7 +353,7 @@
         An adult may request deletion of the Twili account and associated personal information at any time through Contact Us in the app or by emailing <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a>. After verifying the request, we delete the account/profile and associated server-side data and delete or request deletion of associated data from our service providers where supported. Provider systems, backups, security records, and legally required records may not be deleted immediately or may be retained where necessary for legal compliance, security, fraud prevention, transactions, accounting, disputes, or other legitimate purposes permitted by law.
       </p>
       <p>
-        Deleting Twili data does not cancel an Apple subscription; cancellation is governed by the <a href="billing.html">Subscription &amp; Billing Terms</a>.
+        Deleting Twili data does not cancel an Apple subscription; cancellation is governed by the <a href="billing.html">Subscription Terms</a>.
       </p>
     </section>
 
@@ -737,13 +434,20 @@
         You may use this email or Contact Us in the app for support, access, deletion, consent withdrawal, objections, legal notices, complaints, or child-data concerns. The in-app form attempts to submit through Amplitude and does not provide an independent delivery acknowledgement; email is recommended for time-sensitive requests or if you prefer not to place the request text in Amplitude.
       </p>
       <p class="fine-print">
-        Related documents: <a href="terms.html">Terms of Use</a> and <a href="billing.html">Subscription &amp; Billing Terms</a>.
+        Related documents: <a href="terms.html">Terms of Use</a> and <a href="billing.html">Subscription Terms</a>.
       </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Twili. Privacy should be understandable, not hidden.</p>
+    <div class="footer-inner">
+      <span>&copy; 2026 Twili. All rights reserved.</span>
+      <nav class="footer-links" aria-label="Footer legal links">
+        <a href="terms.html">Terms of Use</a>
+        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+        <a href="billing.html">Subscription Terms</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
