@@ -32,7 +32,7 @@
       </p>
       <p class="dates">
         <span><strong>Effective:</strong> August 15, 2026</span>
-        <span><strong>Last updated:</strong> September 4, 2026</span>
+        <span><strong>Last updated:</strong> September 22, 2026</span>
       </p>
     </header>
     <details class="contents">
@@ -63,7 +63,7 @@
         “Twili,” “we,” “us,” and “our” mean <strong>Valerii Petrychenko</strong>, a Ukrainian sole proprietor registered and operating in Ukraine in the information-technology field. Valerii Petrychenko is the controller (and, where applicable, “business”) responsible for the Twili iOS application and its backend service. Our business location is Kyiv, Ukraine. Privacy, support, legal-notice, and deletion requests may be sent to <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a>.
       </p>
       <p>
-        This Policy covers the Twili app, Twili's story-generation backend, and the legal pages linked from the app. Twili is an English-language service launched primarily for the United States and directed to adult parents and legal guardians. It may later become available in other English-speaking countries. Service providers may process information for Twili for the purposes described below; Apple and some other recipients may instead act independently for their own services and legal obligations. Their notices supplement, but do not replace, this Policy. This Policy does not cover third-party sites or services that Twili merely links to.
+        This Policy covers the Twili app, Twili's story-generation backend, and the legal pages linked from the app. Twili is an English-language service directed to adults and may be available in selected countries or regions. Service providers may process information for Twili for the purposes described below; Apple and some other recipients may instead act independently for their own services and legal obligations. Their notices supplement, but do not replace, this Policy. This Policy does not cover third-party sites or services that Twili merely links to.
       </p>
     </section>
 
@@ -215,19 +215,19 @@
     <section class="section-card" id="children">
       <h2>5. Children and parental controls</h2>
       <p>
-        Twili creates content for families but is designed to be installed, configured, and operated only by a parent or legal guardian who is at least 18. Children, including teenagers, may read or listen to adult-reviewed stories and suggest ideas while an adult operates the app, but they must not independently create a profile, type or submit a theme, make a purchase, use Contact us, manage settings, or otherwise submit personal information. Twili does not provide a public child profile, social feed, or child-to-child messaging.
+        Twili creates stories for children but is designed to be installed, configured, and operated only by an adult. Children may read or listen to adult-reviewed stories and suggest ideas while an adult operates the app, but they must not independently create a profile, submit a theme, make a purchase, use Contact Us, manage settings, or otherwise submit personal information. Twili does not provide a public child profile, social feed, or child-to-child messaging.
       </p>
       <p>
-        The adult represents that they are the child’s parent or legal guardian and have authority to provide information about the child and request its processing. For a real child who is old enough for the generation flow described below, use a nickname or first name rather than a full legal name, provide only the age needed for personalization, avoid sensitive themes, and omit the optional photo unless it is genuinely useful. The profile photo remains local in the generation flow, subject to device backups.
+        The adult represents that they are the child’s parent, legal guardian, or otherwise legally authorized to provide information about the child and request its processing. Use a nickname or first name rather than a full legal name, provide only the limited profile information reasonably needed for personalization, avoid sensitive themes, and omit the optional photo unless it is genuinely useful. The profile photo remains local in the generation flow, subject to device backups.
       </p>
       <p>
         We treat child-profile information as child data even when an adult supplies it. Applicable children's privacy law may give a parent the right to review, delete, or stop further collection of a child's information and may require deletion if a child submitted it directly without the necessary authorization or verifiable parental consent. A parent may submit a request at any time through Contact Us in the app or by emailing <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a>. We may verify the requester's identity and authority before acting. A request should identify the affected Twili installation and child profile without including unnecessary child data.
       </p>
       <p>
-        We do not knowingly sell child data, use it for targeted advertising, or condition a child's participation on providing more online information than reasonably necessary for the requested story. We disclose child name or nickname and age to the generation and analytics providers listed in Section 6; those disclosures are not public. The app does not provide a child-facing verifiable-consent flow, so an adult must remain the user of all data-entry features.
+        We do not knowingly sell child data, use it for targeted advertising, or condition a child's participation on providing more online information than reasonably necessary for the requested story. We disclose limited child-profile and story information to the service providers listed in Section 6; those disclosures are not public. The app does not provide a child-facing verifiable-consent flow, so an adult must remain the user of all data-entry features.
       </p>
       <p>
-        Twili's OpenAI configuration does not include Zero Data Retention. An adult must not use AI generation with a profile or information that represents, identifies, or could reasonably be linked to a real child under 13, or under the applicable age of digital consent where the child lives. For a story intended for a younger audience, use a wholly fictional character and fictional age setting that are not linked to a real child. Do not submit the real child’s name, nickname, exact age, address, school, contact information, health information, photograph, or any other personal or sensitive information.
+        An adult may request a personalized story using limited child-profile details needed for that purpose. Do not include a child’s surname, precise birth date, address, school, contact information, health information, photograph, or other unnecessary personal or sensitive information in a profile or story theme. Sections 6–8 explain how story information is processed and retained.
       </p>
     </section>
 
@@ -251,7 +251,7 @@
             </tr>
             <tr>
               <th scope="row">OpenAI</th>
-              <td>Twili's backend uses OpenAI API models for text and image generation. Text requests are made through the Responses API and image requests through the Images API. OpenAI processes the child name or nickname, age, story theme, requested length, and generated story or illustration as necessary to provide those services. Twili sends text requests with Responses API storage disabled (<code>store: false</code>) and does not use stored response IDs or API continuation. This is not Zero Data Retention. Twili has not enabled Zero Data Retention or Modified Abuse Monitoring and has not configured a special processing or data-residency region. OpenAI may process and retain information under its API data practices, including standard abuse-monitoring retention that may last up to 30 days and longer in limited legal or security circumstances. The OpenAI model versions used by Twili may change.</td>
+              <td>Twili's backend uses OpenAI API models for text and image generation. OpenAI processes the limited child-profile details, story request, requested length, and generated story or illustration needed to provide those services. Processing is subject to our configuration, OpenAI's applicable terms and data controls, and safety, security, and legal requirements. The models used by Twili may change as the service evolves.</td>
               <td><a href="https://developers.openai.com/api/docs/guides/your-data#default-usage-policies-by-endpoint">OpenAI API data controls</a></td>
             </tr>
             <tr>
@@ -288,13 +288,13 @@
     <section class="section-card" id="ai">
       <h2>7. AI processing</h2>
       <p>
-        The iOS app does not connect directly to OpenAI. It sends the selected child name or nickname, age, free-text theme, and story length to Twili's backend. After server-side authentication, subscription validation, and request processing, the backend sends the information required for generation to OpenAI's API. Twili uses OpenAI API models for text generation through <code>POST /v1/responses</code> and image generation through <code>POST /v1/images/generations</code>. Model versions may change as the service evolves. Generated text and imagery return through Twili's backend and may be saved on the device.
+        The iOS app sends limited child-profile information, the story request, and requested length to Twili's backend. After authentication, subscription validation, and request processing, the backend sends the information needed for text and image generation to OpenAI's API. Generated text and imagery return through Twili's backend and may be saved on the device.
       </p>
       <p>
-        Twili sends Responses API requests with <code>store: false</code> and does not use stored response IDs, <code>previous_response_id</code>, or OpenAI continuation features. This means Twili does not ask OpenAI to store a Responses API response object for later API use; it does not mean that Zero Data Retention applies. Twili has not enabled Zero Data Retention or Modified Abuse Monitoring and has not selected a special OpenAI processing or data-residency region. OpenAI may process information in accordance with its own API data-processing and retention practices, including standard abuse-monitoring practices described in Section 6.
+        We configure generation requests to limit provider-side storage and retention where supported. Service providers may nevertheless process or retain information as described in their applicable terms and notices, including where reasonably necessary for safety, security, fraud prevention, or legal compliance. Twili does not independently control provider systems.
       </p>
       <p>
-        OpenAI's <a href="https://developers.openai.com/api/docs/guides/safety-checks/under-18-api-guidance">under-18 API guidance</a> addresses additional safeguards for services used in connection with minors. Because Twili does not use Zero Data Retention, the restrictions in Section 5 apply to information concerning children under 13 or the applicable age of digital consent. AI output can be inaccurate, unsuitable, or unexpected, and an adult must review each story and image before sharing it with a child. Twili does not use AI to make decisions that produce legal or similarly significant effects about an adult or child.
+        An adult must provide information about a child only with the authority or consent required by applicable law. AI output can be inaccurate, unsuitable, or unexpected, and an adult must review each story and image before sharing it with a child. Twili does not use AI to make decisions that produce legal or similarly significant effects about an adult or child.
       </p>
     </section>
 
@@ -331,7 +331,7 @@
             </tr>
             <tr>
               <th scope="row">OpenAI prompts and outputs</th>
-              <td>Subject to the OpenAI account and endpoint controls described in Sections 6 and 7. Under standard controls, abuse-monitoring logs may be retained for up to 30 days, and endpoint-specific application state may also apply. Twili’s three-day backend cleanup does not control OpenAI’s retention.</td>
+              <td>Subject to the provider settings, terms, notices, and the safety, security, and legal requirements described in Sections 6 and 7. Twili’s three-day backend cleanup does not control records retained in a provider’s systems.</td>
             </tr>
             <tr>
               <th scope="row">Crash, configuration, and subscription records</th>
@@ -394,7 +394,7 @@
     <section class="section-card" id="transfers">
       <h2>11. International data transfers</h2>
       <p>
-        Twili is operated from Ukraine and is offered primarily to users in the United States. Our providers, including Railway, OpenAI, Amplitude, Google, RevenueCat, and Apple, may process information in the United States, Ukraine, and other countries where they or their subprocessors operate. Twili has not selected a special OpenAI data-residency or processing region. These countries may have different privacy laws and government-access rules from the country where you live.
+        Twili is operated from Ukraine and may be offered in selected countries or regions. Our providers, including Railway, OpenAI, Amplitude, Google, RevenueCat, and Apple, may process information in countries where they or their subprocessors operate. Those countries may have different privacy laws and government-access rules from the country where you live.
       </p>
       <p>
         Where applicable law requires a transfer mechanism or other safeguard, we take measures designed to provide the required protection. If Twili expands into a country whose laws require additional notices, contractual measures, or a local representative, we will update the service and this Policy as required.
