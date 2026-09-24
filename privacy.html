@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Privacy Policy for the Twili personalized storytelling app.">
+  <meta name="description" content="How Twili handles personal information and how you can exercise your privacy rights.">
   <title>Privacy Policy — Twili</title>
   <link rel="stylesheet" href="legal.css">
 </head>
@@ -13,438 +13,101 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="terms.html" aria-label="Twili legal home">Twili<span>Legal</span></a>
-      <nav aria-label="Legal documents">
-        <ul>
-          <li><a href="terms.html">Terms of Use</a></li>
-          <li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
-          <li><a href="billing.html">Subscription Terms</a></li>
-        </ul>
-      </nav>
+      <nav aria-label="Legal documents"><ul>
+        <li><a href="privacy.html" aria-current="page" aria-label="Privacy Policy"><span class="nav-full">Privacy Policy</span><span class="nav-short" aria-hidden="true">Privacy</span></a></li>
+        <li><a href="terms.html" aria-label="Terms of Use"><span class="nav-full">Terms of Use</span><span class="nav-short" aria-hidden="true">Terms</span></a></li>
+        <li><a href="billing.html" aria-label="Subscription Terms"><span class="nav-full">Subscription Terms</span><span class="nav-short" aria-hidden="true">Billing</span></a></li>
+      </ul></nav>
     </div>
   </header>
-
   <main id="main-content">
     <header>
-      <p class="eyebrow">Twili legal</p>
       <h1>Privacy Policy</h1>
-      <p class="lede">
-        This Policy explains how Twili handles information when an adult creates child profiles, requests AI-generated stories, manages a subscription, or contacts us. It also explains the distinction between information kept on the device and information sent to Twili's backend and service providers.
-      </p>
-      <p class="dates">
-        <span><strong>Effective:</strong> August 15, 2026</span>
-        <span><strong>Last updated:</strong> September 22, 2026</span>
-      </p>
+      <p class="lede">How Twili handles personal information and how you can exercise your privacy rights.</p>
+      <p class="dates"><span><strong>Effective:</strong> August 15, 2026</span><span><strong>Last updated:</strong> September 24, 2026</span></p>
     </header>
     <details class="contents">
       <summary>On this page</summary>
       <nav aria-label="Page contents"><ol>
-        <li><a href="#who-we-are">Who we are and the scope of this Policy</a></li>
-        <li><a href="#summary">Plain-language summary</a></li>
-        <li><a href="#data">Information we handle and where it goes</a></li>
-        <li><a href="#purposes">Why we process information</a></li>
-        <li><a href="#children">Children and parental controls</a></li>
-        <li><a href="#sharing">Service providers and other disclosures</a></li>
-        <li><a href="#ai">AI processing</a></li>
-        <li><a href="#retention">Retention, local deletion, and remote deletion</a></li>
-        <li><a href="#rights">Your privacy rights and how to exercise them</a></li>
-        <li><a href="#us-notices">U.S. state privacy notices</a></li>
-        <li><a href="#transfers">International data transfers</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#changes">Changes to this Policy</a></li>
-        <li><a href="#contact">Contact us</a></li>
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#data">Information we use</a></li>
+        <li><a href="#sharing">Who receives information</a></li>
+        <li><a href="#children">Children’s information</a></li>
+        <li><a href="#legal-bases">Legal grounds</a></li>
+        <li><a href="#retention">Retention and deletion</a></li>
+        <li><a href="#rights">Your rights and choices</a></li>
+        <li><a href="#transfers">International processing and security</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ol></nav>
     </details>
-
-
-
-    <section class="section-card" id="who-we-are">
-      <h2>1. Who we are and the scope of this Policy</h2>
-      <p>
-        “Twili,” “we,” “us,” and “our” mean <strong>Valerii Petrychenko</strong>, a Ukrainian sole proprietor registered and operating in Ukraine in the information-technology field. Valerii Petrychenko is the controller (and, where applicable, “business”) responsible for the Twili iOS application and its backend service. Our business location is Kyiv, Ukraine. Privacy, support, legal-notice, and deletion requests may be sent to <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a>.
-      </p>
-      <p>
-        This Policy covers the Twili app, Twili's story-generation backend, and the legal pages linked from the app. Twili is an English-language service directed to adults and may be available in selected countries or regions. Service providers may process information for Twili for the purposes described below; Apple and some other recipients may instead act independently for their own services and legal obligations. Their notices supplement, but do not replace, this Policy. This Policy does not cover third-party sites or services that Twili merely links to.
-      </p>
+    <section id="who-we-are" aria-labelledby="who-we-are-title">
+      <h2 id="who-we-are-title">1. Who we are</h2>
+      <p>Twili is operated by <strong>Valerii Petrychenko</strong>, a sole proprietor based in Kyiv, Ukraine (“we,” “us,” or “our”). We are responsible for personal information processed through the Twili app and related services. Our contact details are below.</p>
     </section>
-
-    <section class="section-card" id="summary">
-      <h2>2. Plain-language summary</h2>
-      <div class="summary-grid">
-        <div class="summary-item">
-          <strong>No named Twili login</strong>
-          <p>The app silently creates a random installation identifier, cryptographic credentials, and session tokens so the backend can recognize the installation.</p>
-        </div>
-        <div class="summary-item">
-          <strong>Profiles and saved stories are mainly local</strong>
-          <p>Names, ages, gender selections, optional photos, saved story text, titles, images, and favorites are stored on the device and may enter Apple device backups.</p>
-        </div>
-        <div class="summary-item">
-          <strong>Generation leaves the device</strong>
-          <p>Child name or nickname, age, story theme, and requested length go to Twili’s Railway-hosted backend and onward to OpenAI’s API platform. Generated text, title, and image return through that backend.</p>
-        </div>
-        <div class="summary-item">
-          <strong>Analytics includes child inputs</strong>
-          <p>Amplitude receives child name or nickname, exact age, theme, and story length when generation starts.</p>
-        </div>
-        <div class="summary-item">
-          <strong>In-app Contact Us uses Amplitude</strong>
-          <p>Pressing Send attempts to submit the email address and full message through Amplitude as Twili's in-app support, feedback, and privacy-request channel. The app does not receive an independent delivery acknowledgement; use email for a time-sensitive request.</p>
-        </div>
-        <div class="summary-item">
-          <strong>No payment-card access</strong>
-          <p>Apple handles payment. RevenueCat receives the random installation ID and subscription/entitlement records needed to provide premium access.</p>
-        </div>
-      </div>
-      <p class="fine-print">
-        Twili does not include third-party advertising, and we do not use information for cross-app behavioral advertising. Twili does not upload the optional child profile photo as part of a story-generation request.
-      </p>
+    <section id="data" aria-labelledby="data-title">
+      <h2 id="data-title">2. Information we use</h2>
+      <p>We receive information you provide, information collected when you use Twili, and purchase information from Apple and our service providers. We use it as follows:</p>
+      <ul>
+      <li><strong>Profiles and story content.</strong> A child’s name or nickname and age, your story instructions and requested length are processed online to generate personalized stories and illustrations. These inputs are also used for product analytics and service improvement. The profile’s gender selection and optional photo stay on your device, subject to your device backups.</li>
+      <li><strong>Contact information.</strong> Your email address, messages and related request details let us handle support, feedback and privacy requests.</li>
+      <li><strong>Usage and technical information.</strong> App and device identifiers, device and app information, IP address, approximate region, interactions, feature preferences, errors and diagnostics help us recognize your installation, provide and secure the service, understand use, and improve performance and features.</li>
+      <li><strong>Purchase information.</strong> Transaction records, selected offers and subscription status let us provide, verify and restore paid access. Apple handles payment; we do not receive your full payment-card details.</li>
+      </ul>
+      <p>Saved profiles, stories and settings are stored on your device and may be included in backups you enable.</p>
+      <p>We do not sell personal information or use it for targeted advertising. We do not use AI to make decisions about you or a child that have legal or similarly significant effects.</p>
     </section>
-
-    <section class="section-card" id="data">
-      <h2>3. Information we handle and where it goes</h2>
-      <div class="table-wrap" role="region" aria-label="Twili data inventory" tabindex="0">
-        <table>
-          <caption>Data inventory based on the Twili iOS client as of August 15, 2026</caption>
-          <thead>
-            <tr>
-              <th scope="col">Category and examples</th>
-              <th scope="col">Source</th>
-              <th scope="col">Location / recipients</th>
-              <th scope="col">Why used</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Installation, authentication, and security data</th>
-              <td>Generated automatically: an internal user/account identifier, public key, access and refresh tokens; app version; request and network metadata such as IP address and timestamps.</td>
-              <td>Stored in the app's local container; the identifier, public key, app version, and authenticated requests reach Twili's Railway-hosted backend. The identifier is also used by Amplitude and Firebase Crashlytics and may be used to associate subscription entitlements in RevenueCat.</td>
-              <td>Create and secure a pseudonymous installation account, authenticate requests, enforce limits, prevent abuse, restore sessions, and correlate service records.</td>
-            </tr>
-            <tr>
-              <th scope="row">Child profile data</th>
-              <td>Entered by the adult: name, exact age, gender selection, optional profile photo; profile IDs and created/updated dates.</td>
-              <td>Profile records and photo are stored locally. Child name and age are also sent in generation requests to the backend/OpenAI and as Amplitude event properties. Gender and profile photo are not included in the generation request or Amplitude child event (Amplitude receives whether a photo exists, not the photo).</td>
-              <td>Personalize stories, display profiles, manage the local library, and analyze use of profile features.</td>
-            </tr>
-            <tr>
-              <th scope="row">Story request and generated content</th>
-              <td>Child name and age; adult-entered free-text theme; short/medium/long selection; generated title, story text, and image; IDs, favorite status, and dates.</td>
-              <td>Name, age, theme, and length go to Amplitude and to the Railway-hosted backend. The backend and OpenAI process the request and generated output. Saved title, story text, and image are stored locally. Amplitude receives generation IDs, attempts, outcomes, duration, and error reasons, but Twili does not send saved story text or story images to Amplitude.</td>
-              <td>Generate, return, save, display, edit, favorite, read, and share a personalized story; measure reliability and quota usage.</td>
-            </tr>
-            <tr>
-              <th scope="row">Contact and feedback data</th>
-              <td>Email address, full free-text message, message length, and form action.</td>
-              <td>Send attempts to record these fields in Amplitude, which Twili uses as its in-app support, feedback, and privacy-request intake. If received, requests are handled manually and do not create a conventional support ticket number. The app does not receive an independent delivery acknowledgement, so requests may instead be emailed to us.</td>
-              <td>Review and respond to support, feedback, and privacy requests; understand contact-flow use; and improve Twili. Do not put a child's name, health information, school, address, or other sensitive facts in the message unless genuinely necessary for the request.</td>
-            </tr>
-            <tr>
-              <th scope="row">Product analytics</th>
-              <td>App launches/lifecycle, screens and tabs, feature actions, story-generation events, reading and sharing actions, session count, install date, app version, system light/dark theme, App Store country, premium status, number of child profiles, total stories generated, featured-content IDs, ratings, timing, and failures.</td>
-              <td>Amplitude, linked to the internal user/account identifier. Amplitude's SDK may also receive ordinary device, app, network, IP, and event-timestamp metadata. Twili does not use Amplitude Session Replay.</td>
-              <td>Operate and improve product flows, diagnose failures, understand feature use, and measure subscription conversion. Not used by us for third-party advertising.</td>
-            </tr>
-            <tr>
-              <th scope="row">Crash and configuration data</th>
-              <td>Crash stack traces, non-fatal error type/context, diagnostic metadata, event breadcrumbs, internal user/account identifier, device/OS/app information, app version, App Store country, system theme, and premium state. Firebase Remote Config receives app/device-instance and fetch metadata needed to deliver settings and experience variants.</td>
-              <td>Google Firebase Crashlytics (automatic crash collection is enabled in release builds) and Firebase Remote Config.</td>
-              <td>Crashlytics is used for stability and troubleshooting. Remote Config is used for app configuration and experimentation involving onboarding flows and paywall or sales screens; it is not used by Twili as a product analytics service.</td>
-            </tr>
-            <tr>
-              <th scope="row">Purchase and subscription data</th>
-              <td>Random client UUID, product/offer selected, transaction/receipt information, entitlement and subscription status, purchase/restore results, and related device/app metadata. Apple may collect billing identity and payment details.</td>
-              <td>Apple App Store and RevenueCat. We do not receive the complete payment-card number.</td>
-              <td>Present offers, process purchases and restores, validate receipts, prevent fraud, and unlock premium access.</td>
-            </tr>
-            <tr>
-              <th scope="row">Local preferences and backups</th>
-              <td>Reading font size, onboarding/first-launch state, featured-story visibility, selected child, session/rating state, premium cache, and other app preferences.</td>
-              <td>On device. SwiftData records, profile photos, story text, and story images are saved in the app container. Depending on the user’s Apple settings, this data may be included in iCloud or computer backups controlled by Apple/user.</td>
-              <td>Remember settings and preserve the local library between sessions or device restores.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>Information we do not intentionally collect</h3>
-      <p>
-        Twili does not request precise location, contacts, microphone, health data, government identifiers, or a payment-card number. Twili contains no ad network and does not call the iOS advertising identifier for production data flows. If you voluntarily type sensitive information into a story theme or contact message, it will be processed as described above, so please do not do so.
-      </p>
+    <section id="sharing" aria-labelledby="sharing-title">
+      <h2 id="sharing-title">3. Who receives information</h2>
+      <p>We use service providers for hosting and storage, AI content generation, analytics, diagnostics, customer communications and subscription management. They receive the information needed for these functions, subject to appropriate confidentiality, security and data-protection obligations. Story inputs and generated content are processed by our AI providers; the other uses are described above.</p>
+      <p>Apple processes App Store purchases and any device backups under its own <a href="https://www.apple.com/legal/privacy/">privacy policy</a>. If you choose to share a story, the recipients and services you select receive that content.</p>
+      <p>We may also disclose information when required by law, to protect people or enforce legal rights, or as part of a transfer of our business, subject to applicable privacy protections.</p>
     </section>
-
-    <section class="section-card" id="purposes">
-      <h2>4. Why we process information</h2>
-      <p>The following table explains the business purpose for each use of information:</p>
-      <div class="table-wrap" role="region" aria-label="Purposes for processing information" tabindex="0">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Purpose</th>
-              <th scope="col">Why and under what authorization</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Create the pseudonymous service session; generate, return, and save requested stories; provide purchases and restores</th>
-              <td>Provide the features requested by the adult user, authenticate the installation, enforce service limits, and fulfill or restore the adult’s Apple transaction.</td>
-            </tr>
-            <tr>
-              <th scope="row">Process child-profile information at an adult’s direction</th>
-              <td>Personalize a story requested by an adult parent or legal guardian. Sections 3 and 7 describe the transfer from Twili's backend to OpenAI. A child must not independently submit this information.</td>
-            </tr>
-            <tr>
-              <th scope="row">Security, authentication, quota enforcement, fraud prevention, and legal compliance</th>
-              <td>Protect Twili and its users, secure the backend session, prevent abuse and fraud, comply with law, and establish or defend legal claims.</td>
-            </tr>
-            <tr>
-              <th scope="row">Product analytics, crash reporting, and remote configuration</th>
-              <td>Diagnose failures, measure feature reliability and use, and configure or test onboarding and paywall experiences. Applicable privacy choices and request methods are described in Section 9.</td>
-            </tr>
-            <tr>
-              <th scope="row">Receive and respond to feedback or a privacy request</th>
-              <td>Handle the communication requested by the adult and meet privacy-law obligations. The adult may use the in-app Contact Us form or the email address in Section 14.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>
-        This Policy is a notice; it is not itself the adult’s consent and does not expand Twili’s rights to process information beyond applicable law.
-      </p>
+    <section id="children" aria-labelledby="children-title">
+      <h2 id="children-title">4. Children’s information</h2>
+      <p>Twili is designed for adults to create stories for children. An adult must operate the app and be the child’s parent, legal guardian or otherwise legally authorized to provide the child’s information. Children must not independently submit personal information or make purchases.</p>
+      <p>Use a nickname where possible and provide only what is needed for a story. Avoid sensitive information or details that could identify or locate a child outside your household.</p>
+      <p>A parent or guardian may request access to, correction or deletion of a child’s information, or ask us to stop its further collection. If we learn that a child submitted information without required authorization, we will take appropriate steps to remove it.</p>
     </section>
-
-    <section class="section-card" id="children">
-      <h2>5. Children and parental controls</h2>
-      <p>
-        Twili creates stories for children but is designed to be installed, configured, and operated only by an adult. Children may read or listen to adult-reviewed stories and suggest ideas while an adult operates the app, but they must not independently create a profile, submit a theme, make a purchase, use Contact Us, manage settings, or otherwise submit personal information. Twili does not provide a public child profile, social feed, or child-to-child messaging.
-      </p>
-      <p>
-        The adult represents that they are the child’s parent, legal guardian, or otherwise legally authorized to provide information about the child and request its processing. Use a nickname or first name rather than a full legal name, provide only the limited profile information reasonably needed for personalization, avoid sensitive themes, and omit the optional photo unless it is genuinely useful. The profile photo remains local in the generation flow, subject to device backups.
-      </p>
-      <p>
-        We treat child-profile information as child data even when an adult supplies it. Applicable children's privacy law may give a parent the right to review, delete, or stop further collection of a child's information and may require deletion if a child submitted it directly without the necessary authorization or verifiable parental consent. A parent may submit a request at any time through Contact Us in the app or by emailing <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a>. We may verify the requester's identity and authority before acting. A request should identify the affected Twili installation and child profile without including unnecessary child data.
-      </p>
-      <p>
-        We do not knowingly sell child data, use it for targeted advertising, or condition a child's participation on providing more online information than reasonably necessary for the requested story. We disclose limited child-profile and story information to the service providers listed in Section 6; those disclosures are not public. The app does not provide a child-facing verifiable-consent flow, so an adult must remain the user of all data-entry features.
-      </p>
-      <p>
-        An adult may request a personalized story using limited child-profile details needed for that purpose. Do not include a child’s surname, precise birth date, address, school, contact information, health information, photograph, or other unnecessary personal or sensitive information in a profile or story theme. Sections 6–8 explain how story information is processed and retained.
-      </p>
+    <section id="legal-bases" aria-labelledby="legal-bases-title">
+      <h2 id="legal-bases-title">5. Legal grounds</h2>
+      <p>Where data-protection law requires a legal basis, we process adult users’ information to provide the service under our agreement with them. We also process information to meet legal obligations and for our legitimate interests in providing requested personalization, supporting users, protecting the service and improving it, balanced against the rights of affected adults and children. We rely on consent where required by law.</p>
+      <p>Providing personal information is not a statutory requirement, but we may be unable to deliver a requested feature or respond to a request without the information needed for it.</p>
     </section>
-
-    <section class="section-card" id="sharing">
-      <h2>6. Service providers and other disclosures</h2>
-      <p>We disclose information only for the purposes described here, at the adult user’s direction, or as legally required.</p>
-      <div class="table-wrap" role="region" aria-label="Service provider disclosures" tabindex="0">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Recipient</th>
-              <th scope="col">Role and information</th>
-              <th scope="col">More information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Railway</th>
-              <td>Cloud hosting for Twili’s backend; receives pseudonymous authentication data, network metadata, story inputs (child name, age, theme, length), generated output, and operational/security records.</td>
-              <td><a href="https://railway.com/legal/privacy">Railway Privacy Policy</a></td>
-            </tr>
-            <tr>
-              <th scope="row">OpenAI</th>
-              <td>Twili's backend uses OpenAI API models for text and image generation. OpenAI processes the limited child-profile details, story request, requested length, and generated story or illustration needed to provide those services. Processing is subject to our configuration, OpenAI's applicable terms and data controls, and safety, security, and legal requirements. The models used by Twili may change as the service evolves.</td>
-              <td><a href="https://developers.openai.com/api/docs/guides/your-data#default-usage-policies-by-endpoint">OpenAI API data controls</a></td>
-            </tr>
-            <tr>
-              <th scope="row">Amplitude</th>
-              <td>Product analytics and the attempted delivery route for the in-app Contact Us form. Receives the internal user/account identifier, device/app metadata, detailed usage events, child name or nickname, exact age, theme and story length at generation start, and the email/full message submitted through Contact Us. Twili does not use Session Replay.</td>
-              <td><a href="https://amplitude.com/privacy">Amplitude Privacy Notice</a></td>
-            </tr>
-            <tr>
-              <th scope="row">Google Firebase</th>
-              <td>Firebase Crashlytics receives crash and diagnostic data, event breadcrumbs, selected user properties, the internal user/account identifier, and app/device metadata. Firebase Remote Config receives app/device-instance and fetch metadata and is used only to configure and experiment with onboarding flows and paywall or sales screens. Twili does not use Remote Config as a product analytics provider.</td>
-              <td><a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a></td>
-            </tr>
-            <tr>
-              <th scope="row">RevenueCat</th>
-              <td>Subscription infrastructure. Receives the random UUID, offerings, purchases, receipts/transaction records, entitlements, restore status, and app/device metadata.</td>
-              <td><a href="https://www.revenuecat.com/privacy/">RevenueCat Privacy Policy</a></td>
-            </tr>
-            <tr>
-              <th scope="row">Apple</th>
-              <td>App distribution, in-app purchase/payment, storefront, and any user-enabled device backup. Apple processes payment identity and backup data under its own relationship with the user.</td>
-              <td><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>
-        Providers process information subject to their applicable terms, privacy notices, settings, and our instructions where they act on our behalf. Where required by law, we use contractual or other measures designed to require appropriate protection and assistance with privacy requests.
-      </p>
-      <p>
-        We may also disclose information: (a) to comply with law, valid legal process, or enforceable government requests; (b) to protect users, children, Twili, or the public from fraud, abuse, or safety threats; (c) to establish or defend legal claims; or (d) in a merger, financing, acquisition, reorganization, or sale, subject to notice and continued protection. We do not sell lists of personal information, disclose data to data brokers, or permit third parties to use Twili data for their own cross-context behavioral advertising.
-      </p>
+    <section id="retention" aria-labelledby="retention-title">
+      <h2 id="retention-title">6. Retention and deletion</h2>
+      <p>We automatically delete your Twili service account after six months of inactivity. You may also request deletion of your account and associated personal information at any time using the contact details below.</p>
+      <p>Other personal information is retained only for as long as needed for its stated purpose. We consider whether it is needed to complete or recover a story request, investigate errors, understand product use, resolve a support request, or meet security, transaction-record and legal obligations. We then delete or anonymize it, subject to backup cycles. Limited records may be retained where legally permitted and necessary, including for fraud prevention, accounting or legal claims.</p>
+      <p>Deleting a child profile removes that profile and its saved stories from the app. This does not automatically delete information already processed online or copies in device backups. Manage device backups through your device settings.</p>
     </section>
-
-    <section class="section-card" id="ai">
-      <h2>7. AI processing</h2>
-      <p>
-        The iOS app sends limited child-profile information, the story request, and requested length to Twili's backend. After authentication, subscription validation, and request processing, the backend sends the information needed for text and image generation to OpenAI's API. Generated text and imagery return through Twili's backend and may be saved on the device.
-      </p>
-      <p>
-        We configure generation requests to limit provider-side storage and retention where supported. Service providers may nevertheless process or retain information as described in their applicable terms and notices, including where reasonably necessary for safety, security, fraud prevention, or legal compliance. Twili does not independently control provider systems.
-      </p>
-      <p>
-        An adult must provide information about a child only with the authority or consent required by applicable law. AI output can be inaccurate, unsuitable, or unexpected, and an adult must review each story and image before sharing it with a child. Twili does not use AI to make decisions that produce legal or similarly significant effects about an adult or child.
-      </p>
+    <section id="rights" aria-labelledby="rights-title">
+      <h2 id="rights-title">7. Your rights and choices</h2>
+      <p>Depending on applicable law, you may request access, correction, deletion or a portable copy of your information; object to or restrict processing; and withdraw consent without affecting earlier lawful processing. Parents and guardians may exercise applicable rights for a child. You may also complain to your local data-protection authority.</p>
+      <p>Tell us which right you wish to exercise and provide only the information needed to locate the relevant records. We may verify your identity and, where relevant, your authority to act for a child or another person. We respond within the time required by law and do not discriminate against you for exercising your rights. If a right to appeal applies, you may ask us to review a refusal through the same contact channels.</p>
+      <p>For choices not available in the app, including requests to stop analytics processing, contact us. Uninstalling the app stops new collection from that installation but does not itself delete existing records or cancel a subscription; see the <a href="billing.html">Subscription Terms</a>.</p>
     </section>
-
-    <section class="section-card" id="retention">
-      <h2>8. Retention, local deletion, and remote deletion</h2>
-      <div class="table-wrap" role="region" aria-label="Retention schedule" tabindex="0">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Record</th>
-              <th scope="col">Retention approach</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Local child profiles and stories</th>
-              <td>Kept on the device until the adult deletes the child profile (which deletes that child’s saved stories), the data is otherwise removed in-app, or the app is uninstalled. Copies may remain in Apple device backups until the user deletes or Apple rotates those backups.</td>
-            </tr>
-            <tr>
-              <th scope="row">Local UUID, tokens, and preferences</th>
-              <td>Kept in the app’s local settings container while the app is installed or until reset/deletion. Uninstalling normally removes the active local copy, but does not by itself delete server/provider records or backups.</td>
-            </tr>
-            <tr>
-              <th scope="row">Twili backend story prompts and generated output</th>
-              <td>Story prompts and generated output temporarily stored in Twili-controlled systems hosted on Railway are retained for approximately three days. A cleanup job runs once per day and deletes story content older than three days on its next run, so deletion does not necessarily occur exactly 72 hours after collection. This schedule applies only to story content on Twili's backend and does not govern OpenAI, Amplitude, Firebase, RevenueCat, Apple, backups, or other provider records.</td>
-            </tr>
-            <tr>
-              <th scope="row">Backend account/profile and operational records</th>
-              <td>The pseudonymous Twili account/profile is automatically deleted after more than six months without activity. It may be deleted sooner following a verified request. Authentication, quota, security, fraud-prevention, network, and backup records are not covered by the three-day story-content cleanup and may be kept for as long as reasonably necessary for service operation, security, fraud prevention, backup rotation, legal compliance, or the establishment, exercise, or defense of claims.</td>
-            </tr>
-            <tr>
-              <th scope="row">Amplitude analytics and Contact Us submissions</th>
-              <td>Kept according to applicable Amplitude retention practices and Twili's project settings. Twili does not promise a fixed automatic deletion period for Amplitude records. The Twili/Railway story-content cleanup does not delete Amplitude events. Twili can use the internal user/account identifier to locate user-linked Amplitude data and manually delete it or submit it for deletion following a verified privacy request.</td>
-            </tr>
-            <tr>
-              <th scope="row">OpenAI prompts and outputs</th>
-              <td>Subject to the provider settings, terms, notices, and the safety, security, and legal requirements described in Sections 6 and 7. Twili’s three-day backend cleanup does not control records retained in a provider’s systems.</td>
-            </tr>
-            <tr>
-              <th scope="row">Crash, configuration, and subscription records</th>
-              <td>Kept for the period needed to diagnose supported releases, deliver configuration or entitlements, prevent fraud, resolve disputes, and meet accounting or legal obligations, subject to Google, RevenueCat, and Apple retention practices. Historical Crashlytics records may not be physically deleted immediately. Following a verified request, we delete or request deletion of associated data from these providers where supported.</td>
-            </tr>
-            <tr>
-              <th scope="row">Privacy requests and legal records</th>
-              <td>Kept as needed to verify and document compliance, prevent fraudulent requests, enforce agreements, and meet limitation periods or legal duties.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>What an in-app deletion does—and does not do</h3>
-      <p>
-        Choosing <strong>Delete child</strong> removes that profile and every locally saved story associated with it from the active app container. It does not automatically erase earlier generation requests, Amplitude events, Crashlytics records, RevenueCat records, backend logs, AI-provider copies, or existing Apple backups because those systems are separate. Uninstalling the app has the same limitation.
-      </p>
-      <p>
-        An adult may request deletion of the Twili account and associated personal information at any time through Contact Us in the app or by emailing <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a>. After verifying the request, we delete the account/profile and associated server-side data and delete or request deletion of associated data from our service providers where supported. Provider systems, backups, security records, and legally required records may not be deleted immediately or may be retained where necessary for legal compliance, security, fraud prevention, transactions, accounting, disputes, or other legitimate purposes permitted by law.
-      </p>
-      <p>
-        Deleting Twili data does not cancel an Apple subscription; cancellation is governed by the <a href="billing.html">Subscription Terms</a>.
-      </p>
+    <section id="transfers" aria-labelledby="transfers-title">
+      <h2 id="transfers-title">8. International processing and security</h2>
+      <p>We operate from Ukraine, and our service providers may process information in the United States and other countries where they operate. Privacy laws may differ from those where you live. Where required, transfers must be covered by an applicable adequacy decision, approved contractual safeguards or another lawful transfer mechanism. You may contact us for information about the safeguards applicable to your data.</p>
+      <p>We use reasonable technical and organizational measures to protect personal information. No storage or transmission method is completely secure.</p>
     </section>
-
-    <section class="section-card" id="rights">
-      <h2>9. Your privacy rights and how to exercise them</h2>
-      <p>
-        Depending on where you live, an adult user or verified parent/guardian may have the right to ask us to: confirm whether we process information; access it; correct it; delete it; restrict or object to processing; receive a portable copy; withdraw consent; or obtain information about recipients and transfer safeguards. Withdrawal does not affect processing already lawful before withdrawal. You may also complain to the regulator or attorney general responsible for privacy enforcement where you live.
-      </p>
-      <ol>
-        <li>Use Contact Us in the app, or email <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a> with the subject “Twili Privacy Request.” The in-app form attempts to submit through Amplitude and does not provide an independent delivery acknowledgement; email is recommended for time-sensitive requests or if you prefer not to place the request text in Amplitude.</li>
-        <li>State the right you wish to exercise and whether the request concerns the adult, a child profile, or the entire pseudonymous installation.</li>
-        <li>Provide the minimum information needed to locate the record. An in-app request is associated with the internal user/account identifier. For an email request, we may give instructions for securely providing that identifier. Do not email a child's photo, full name, birth date, or story content unless specifically necessary.</li>
-      </ol>
-      <p>
-        We verify the requester in proportion to the request and sensitivity, including parental authority where appropriate, and respond within the period required by applicable law, subject to permitted extensions and notice. Requests are ordinarily free, but we may charge or decline where the law permits for manifestly unfounded, excessive, repetitive, or unverifiable requests. You will not be discriminated against for exercising a privacy right. If applicable law provides an appeal right and we deny the request, our response will explain how to appeal.
-      </p>
-      <p>
-        You may delete local profiles and stories using the app's controls. The app does not provide an in-app switch to disable Amplitude or Crashlytics collection; uninstalling the app stops future collection from that installation. You may contact us to object to processing or request deletion of user-linked provider data. We will honor the request to the extent required by applicable law and supported by the relevant provider. Device backup choices are managed in Apple settings, and subscription choices are managed through Apple.
-      </p>
+    <section id="changes" aria-labelledby="changes-title">
+      <h2 id="changes-title">9. Changes to this policy</h2>
+      <p>We will update the date above when this policy changes and provide additional notice or request consent where required for a material change.</p>
     </section>
-
-    <section class="section-card" id="us-notices">
-      <h2>10. U.S. state privacy notices</h2>
-      <p>
-        This section applies only where a U.S. state privacy law applies to Twili and does not suggest that any particular threshold is met. In the preceding 12 months, we may have collected the categories described in Section 3: identifiers; customer-record/contact information; commercial information (subscription and entitlement); internet or other electronic activity; approximate location derived from IP/App Store country; user-provided content; device/diagnostic information; and inferences such as feature preferences or premium state. Sources are the adult, the device, Apple, and our providers. Business purposes and recipient categories are in Sections 3, 4, and 6.
-      </p>
-      <p>
-        We do not knowingly sell personal information or share it for cross-context behavioral advertising, and we do not process it for targeted advertising. We have not knowingly sold or shared the personal information of consumers under 16 for those purposes. Therefore, Twili does not offer a “Do Not Sell or Share” link. If our practices change, we will provide required opt-out methods and honor legally recognized signals such as Global Privacy Control where applicable. Twili is an iOS app and does not respond to legacy browser “Do Not Track” signals; its legal pages do not use advertising trackers.
-      </p>
-      <p>
-        Subject to applicable law and exceptions, residents may have rights to know/access, delete, correct, obtain a portable copy, opt out of sale/sharing/targeted advertising or certain profiling, limit certain uses of sensitive personal information, appeal a refusal, and receive equal service. We use child data only for the disclosed service, analytics, security, and legal purposes—not to infer characteristics for advertising. Submit a request under Section 9. An authorized agent may act where legally permitted, but we may require proof of authority and direct verification with the consumer. If we deny an appealable request, reply “Appeal” to our decision.
-      </p>
-      <p>
-        California residents may also request information under California’s “Shine the Light” law; we do not disclose personal information to third parties for their own direct-marketing purposes. Material Policy changes will be identified by the “Last updated” date and, when required, communicated in the app or by another prominent notice before taking effect.
-      </p>
-    </section>
-
-    <section class="section-card" id="transfers">
-      <h2>11. International data transfers</h2>
-      <p>
-        Twili is operated from Ukraine and may be offered in selected countries or regions. Our providers, including Railway, OpenAI, Amplitude, Google, RevenueCat, and Apple, may process information in countries where they or their subprocessors operate. Those countries may have different privacy laws and government-access rules from the country where you live.
-      </p>
-      <p>
-        Where applicable law requires a transfer mechanism or other safeguard, we take measures designed to provide the required protection. If Twili expands into a country whose laws require additional notices, contractual measures, or a local representative, we will update the service and this Policy as required.
-      </p>
-    </section>
-
-    <section class="section-card" id="security">
-      <h2>12. Security</h2>
-      <p>
-        We use technical and organizational measures designed to protect information, including encrypted network transport, authenticated backend requests, pseudonymous internal identifiers, access restrictions, and protections provided by the iOS app sandbox. Users should enable a device passcode, keep iOS current, and protect their device backups.
-      </p>
-      <p>
-        No storage or transmission method is completely secure. We cannot guarantee absolute security. If a breach creates a legally reportable risk, we will notify affected users and authorities as required.
-      </p>
-    </section>
-
-    <section class="section-card" id="changes">
-      <h2>13. Changes to this Policy</h2>
-      <p>
-        We may update this Policy when Twili’s features, providers, or legal obligations change. We will revise the date above and provide additional in-app or prominent notice, and obtain consent, where required for a material change. Earlier versions remain available on request; changes apply as described in the updated notice and applicable law.
-      </p>
-    </section>
-
-    <section class="section-card" id="contact">
-      <h2>14. Contact us</h2>
-      <dl class="plain-dl">
-        <dt>Controller / operator</dt>
-        <dd>Valerii Petrychenko</dd>
-        <dt>Legal status</dt>
-        <dd>Sole Proprietor, Ukraine</dd>
-        <dt>Business location</dt>
-        <dd>Kyiv, Ukraine</dd>
-        <dt>Support, privacy, and legal email</dt>
-        <dd><a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a></dd>
-      </dl>
-      <p>
-        You may use this email or Contact Us in the app for support, access, deletion, consent withdrawal, objections, legal notices, complaints, or child-data concerns. The in-app form attempts to submit through Amplitude and does not provide an independent delivery acknowledgement; email is recommended for time-sensitive requests or if you prefer not to place the request text in Amplitude.
-      </p>
-      <p class="fine-print">
-        Related documents: <a href="terms.html">Terms of Use</a> and <a href="billing.html">Subscription Terms</a>.
-      </p>
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">10. Contact</h2>
+      <p>For support or privacy requests, including requests about a child’s information, use <strong>Contact Us</strong> in the app or email <a href="mailto:twili.support@gmail.com">twili.support@gmail.com</a>.</p>
+      <address>Valerii Petrychenko · Sole Proprietor<br>Kyiv, Ukraine</address>
+      <p>Related documents: <a href="terms.html">Terms of Use</a> and <a href="billing.html">Subscription Terms</a>.</p>
     </section>
   </main>
-
   <footer>
     <div class="footer-inner">
       <span>&copy; 2026 Twili. All rights reserved.</span>
       <nav class="footer-links" aria-label="Footer legal links">
-        <a href="terms.html">Terms of Use</a>
         <a href="privacy.html" aria-current="page">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
         <a href="billing.html">Subscription Terms</a>
       </nav>
     </div>
